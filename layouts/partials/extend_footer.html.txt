@@ -1,0 +1,32 @@
+{{ if .Page.Store.Get "hasMermaid" }}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+  const getTheme = () => document.body.classList.contains('dark') ? 'dark' : 'default';
+
+  const renderMermaid = async () => {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: getTheme(),
+      securityLevel: 'loose'
+    });
+    await mermaid.run({
+      querySelector: '.mermaid'
+    });
+  };
+
+  renderMermaid();
+
+  const observer = new MutationObserver(() => {
+    document.querySelectorAll('.mermaid').forEach((el) => {
+      el.removeAttribute('data-processed');
+    });
+    renderMermaid();
+  });
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+</script>
+{{ end }}

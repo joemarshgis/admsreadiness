@@ -9,7 +9,9 @@ tags:
   - OMS
 categories:
   - Architecture
----# GIS in the Center: The Architecture Utilities Actually Operate On
+---
+
+# GIS in the Center: The Architecture Utilities Actually Operate On
 
 Utilities often talk about “integrated systems,” but in practice,
 most integrations already revolve around one platform:
@@ -18,6 +20,8 @@ most integrations already revolve around one platform:
 
 Not as a mapping tool—but as the operational system of record
 that defines how the grid actually exists.
+
+<img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/ec0e46fada53e0ecb01ce0756b6d7c70fd69f9fb.jpg" alt="Utility grid operations control room" width="1663" height="923" loading="lazy">
 
 ## The Reality of Utility Architecture
 
@@ -68,8 +72,26 @@ Whether intentional or not, **GIS becomes the hub**.
 
 ## A Practical “GIS-in-the-Center” Model
 
+<img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/e10881d545c4e2bea93cd9c015151508b83b6279.jpg" alt="Utility GIS network model map" width="800" height="611" loading="lazy">
+
 A more honest architecture diagram looks like this:
 
+flowchart LR
+    GIS["GIS<br/>System of Record"] --> OMS["OMS"]
+    GIS --> ADMS["ADMS / DMS"]
+    GIS --> SCADA["SCADA"]
+    GIS --> DERMS["DERMS"]
+    GIS --> ENG["Engineering Analysis"]
+    GIS --> PLAN["Distribution Planning"]
+    GIS --> EAM["Asset Management"]
+    GIS --> FIELD["Field Mobility / Work Mgmt"]
+    GIS --> CIS["CIS"]
+    GIS --> AMI["AMI / MDMS"]
+
+    OMS -. outage states .-> GIS
+    SCADA -. telemetry references .-> GIS
+    FIELD -. work/status feedback .-> GIS
+	
 - **GIS at the center**
 - All operational and analytical systems integrating outward
 - Data flowing *from* GIS to consuming systems
