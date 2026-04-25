@@ -1,8 +1,0 @@
-baseURL: "https://joemarshgis.github.io/admsreadiness/"
-languageCode: "en-us"
-title: "ADMS Readiness"
-theme: "PaperMod"
-
-caches:
-  images:
-    dir: ":cacheDir/images"
