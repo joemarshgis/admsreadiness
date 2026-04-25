@@ -74,5 +74,15 @@ or point-to-point integrations.&lt;/p&gt;</description>
 &lt;p&gt;A collection of writing on utility GIS, data readiness,
 and operational system integration.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/admsreadiness/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/admsreadiness/about/</guid>
+      <description>&lt;h1 id=&#34;about&#34;&gt;About&lt;/h1&gt;
+&lt;p&gt;I’m Joe Marsh, a senior consultant and product leader focused on helping utilities modernize operations through GIS, ADMS, utility network, and grid management solutions.&lt;/p&gt;
+&lt;p&gt;My work sits at the intersection of technology, strategy, and operations. I’m especially interested in how strong network data, clear system ownership, and practical architecture decisions improve reliability, planning, and operational performance.&lt;/p&gt;
+&lt;p&gt;Over the course of my career, I’ve worked on utility transformation efforts involving ADMS implementations, Utility Network migrations, outage management improvements, GIS data modeling, training, and business intelligence. I care most about turning complex technical environments into clear, usable outcomes for the people who operate them every day.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
