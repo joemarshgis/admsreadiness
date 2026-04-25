@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on ADMS Readiness</title>
+    <link>http://localhost:1313/admsreadiness/tags/</link>
+    <description>Recent content in Tags on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/admsreadiness/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ADMS</title>
+      <link>http://localhost:1313/admsreadiness/tags/adms/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/admsreadiness/tags/adms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Readiness</title>
+      <link>http://localhost:1313/admsreadiness/tags/data-readiness/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/admsreadiness/tags/data-readiness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GIS</title>
+      <link>http://localhost:1313/admsreadiness/tags/gis/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/admsreadiness/tags/gis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OMS</title>
+      <link>http://localhost:1313/admsreadiness/tags/oms/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/admsreadiness/tags/oms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Utilities</title>
+      <link>http://localhost:1313/admsreadiness/tags/utilities/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/admsreadiness/tags/utilities/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

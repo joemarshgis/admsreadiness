@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data Readiness on ADMS Readiness</title>
+    <link>http://localhost:1313/admsreadiness/tags/data-readiness/</link>
+    <description>Recent content in Data Readiness on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/admsreadiness/tags/data-readiness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIS as the System of Record for ADMS and OMS</title>
+      <link>http://localhost:1313/admsreadiness/posts/2026-01-gis-system-of-record/</link>
+      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/admsreadiness/posts/2026-01-gis-system-of-record/</guid>
+      <description>&lt;h1 id=&#34;gis-as-the-system-of-record-for-adms-and-oms&#34;&gt;GIS as the System of Record for ADMS and OMS&lt;/h1&gt;
+&lt;p&gt;Utilities rarely fail ADMS or OMS projects because of software.
+They fail because foundational GIS data isn’t ready.&lt;/p&gt;
+&lt;h2 id=&#34;why-gis-is-central&#34;&gt;Why GIS Is Central&lt;/h2&gt;
+&lt;p&gt;GIS defines:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Network connectivity&lt;/li&gt;
+&lt;li&gt;Phase modeling&lt;/li&gt;
+&lt;li&gt;Operating voltage&lt;/li&gt;
+&lt;li&gt;Asset relationships&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every downstream system depends on this accuracy.&lt;/p&gt;
+&lt;h2 id=&#34;common-data-gaps&#34;&gt;Common Data Gaps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Self-intersecting lines&lt;/li&gt;
+&lt;li&gt;Missing or invalid phase designation&lt;/li&gt;
+&lt;li&gt;Null facility IDs&lt;/li&gt;
+&lt;li&gt;Inconsistent feeder modeling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-actually-works&#34;&gt;What Actually Works&lt;/h2&gt;
+&lt;p&gt;A targeted GIS data readiness assessment
+&lt;em&gt;before&lt;/em&gt; OMS or ADMS implementation or upgrades.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
