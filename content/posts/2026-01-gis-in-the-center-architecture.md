@@ -21,7 +21,14 @@ most integrations already revolve around one platform:
 Not as a mapping tool—but as the operational system of record
 that defines how the grid actually exists.
 
-<img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/ec0e46fada53e0ecb01ce0756b6d7c70fd69f9fb.jpg" alt="Utility grid operations control room" width="1663" height="923" loading="lazy">
+<div style="margin: 1.5rem 0;">
+  <img
+    src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/ec0e46fada53e0ecb01ce0756b6d7c70fd69f9fb.jpg"
+    alt="Utility grid operations control room"
+    style="display: block; width: 100%; max-width: 960px; height: 360px; object-fit: cover; margin: 0 auto; border-radius: 8px;"
+    loading="lazy"
+  >
+</div>
 
 ## The Reality of Utility Architecture
 
@@ -72,10 +79,18 @@ Whether intentional or not, **GIS becomes the hub**.
 
 ## A Practical “GIS-in-the-Center” Model
 
-<img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/e10881d545c4e2bea93cd9c015151508b83b6279.jpg" alt="Utility GIS network model map" width="800" height="611" loading="lazy">
+<div style="margin: 1.5rem 0;">
+  <img
+    src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/e10881d545c4e2bea93cd9c015151508b83b6279.jpg"
+    alt="Utility GIS network model map"
+    style="display: block; width: 100%; max-width: 960px; height: 320px; object-fit: cover; margin: 0 auto; border-radius: 8px;"
+    loading="lazy"
+  >
+</div>
 
 A more honest architecture diagram looks like this:
 
+```mermaid
 flowchart LR
     GIS["GIS<br/>System of Record"] --> OMS["OMS"]
     GIS --> ADMS["ADMS / DMS"]
@@ -91,7 +106,8 @@ flowchart LR
     OMS -. outage states .-> GIS
     SCADA -. telemetry references .-> GIS
     FIELD -. work/status feedback .-> GIS
-	
+```
+
 - **GIS at the center**
 - All operational and analytical systems integrating outward
 - Data flowing *from* GIS to consuming systems

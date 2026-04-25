@@ -47,23 +47,16 @@ most integrations already revolve around one platform:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;GIS.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Not as a mapping tool—but as the operational system of record
 that defines how the grid actually exists.&lt;/p&gt;
+&lt;div style=&#34;margin: 1.5rem 0;&#34;&gt;
+  &lt;img
+    src=&#34;https://pplx-res.cloudinary.com/image/upload/pplx_search_images/ec0e46fada53e0ecb01ce0756b6d7c70fd69f9fb.jpg&#34;
+    alt=&#34;Utility grid operations control room&#34;
+    style=&#34;display: block; width: 100%; max-width: 960px; height: 360px; object-fit: cover; margin: 0 auto; border-radius: 8px;&#34;
+    loading=&#34;lazy&#34;
+  &gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;the-reality-of-utility-architecture&#34;&gt;The Reality of Utility Architecture&lt;/h2&gt;
-&lt;p&gt;Modern utilities run a complex ecosystem of systems:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;OMS&lt;/li&gt;
-&lt;li&gt;ADMS / DMS&lt;/li&gt;
-&lt;li&gt;SCADA&lt;/li&gt;
-&lt;li&gt;DERMS&lt;/li&gt;
-&lt;li&gt;Engineering Analysis&lt;/li&gt;
-&lt;li&gt;Distribution Planning&lt;/li&gt;
-&lt;li&gt;Asset Management (EAM / APM)&lt;/li&gt;
-&lt;li&gt;Mobile Workforce / Field Mobility&lt;/li&gt;
-&lt;li&gt;Work Management&lt;/li&gt;
-&lt;li&gt;CIS&lt;/li&gt;
-&lt;li&gt;AMI / MDMS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;On architecture diagrams, these systems are often drawn in neat layers
-or point-to-point integrations.&lt;/p&gt;</description>
+&lt;p&gt;Modern utilities run a complex ecosystem of systems:&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>

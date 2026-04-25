@@ -27,3 +27,8 @@ params:
     imageTitle: "Joe Marsh"
     imageWidth: 180
     imageHeight: 180
+    
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
