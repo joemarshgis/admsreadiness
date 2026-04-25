@@ -1,7 +1,7 @@
 ---
 title: "GIS in the Center: The Architecture Utilities Actually Operate On"
 date: 2026-04-25
-draft: true
+draft: false
 tags:
   - GIS
   - utilities
