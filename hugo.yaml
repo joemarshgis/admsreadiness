@@ -3,6 +3,27 @@ languageCode: "en-us"
 title: "ADMS Readiness"
 theme: "PaperMod"
 
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 20
+
 caches:
   images:
     dir: ":cacheDir/images"
+
+params:
+  profileMode:
+    enabled: true
+    title: "Joe Marsh"
+    subtitle: "Thoughts on GIS, utility architecture, ADMS, OMS, and operational data readiness."
+    imageUrl: "/images/joe-marsh-headshot.jpg"
+    imageTitle: "Joe Marsh"
+    imageWidth: 180
+    imageHeight: 180
