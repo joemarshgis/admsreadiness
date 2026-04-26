@@ -92,20 +92,8 @@ A more honest architecture diagram looks like this:
 
 ```mermaid
 flowchart LR
-    GIS["GIS<br/>System of Record"] --> OMS["OMS"]
-    GIS --> ADMS["ADMS / DMS"]
-    GIS --> SCADA["SCADA"]
-    GIS --> DERMS["DERMS"]
-    GIS --> ENG["Engineering Analysis"]
-    GIS --> PLAN["Distribution Planning"]
-    GIS --> EAM["Asset Management"]
-    GIS --> FIELD["Field Mobility / Work Mgmt"]
-    GIS --> CIS["CIS"]
-    GIS --> AMI["AMI / MDMS"]
-
-    OMS -. outage states .-> GIS
-    SCADA -. telemetry references .-> GIS
-    FIELD -. work/status feedback .-> GIS
+  A[GIS] --> B[ADMS]
+  A --> C[OMS]
 ```
 
 - **GIS at the center**
