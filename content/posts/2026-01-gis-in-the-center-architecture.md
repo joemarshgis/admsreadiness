@@ -91,9 +91,53 @@ Whether intentional or not, **GIS becomes the hub**.
 A more honest architecture diagram looks like this:
 
 ```mermaid
-flowchart LR
-  A[GIS] --> B[ADMS]
-  A --> C[OMS]
+flowchart TB
+  GIS["GIS<br/>System of Record"]
+
+  subgraph Ops["Operations"]
+    OMS["OMS"]
+    ADMS["ADMS / DMS"]
+    SCADA["SCADA"]
+    FIELD["Field Mobility / Work Mgmt"]
+  end
+
+  subgraph Planning["Planning & Analysis"]
+    ENG["Engineering Analysis"]
+    PLAN["Distribution Planning"]
+  end
+
+  subgraph Enterprise["Enterprise & Customer"]
+    EAM["Asset Management"]
+    CIS["CIS"]
+    AMI["AMI / MDMS"]
+    DERMS["DERMS"]
+  end
+
+  %% GIS as the hub (outbound)
+  GIS --> OMS
+  GIS --> ADMS
+  GIS --> SCADA
+  GIS --> FIELD
+  GIS --> ENG
+  GIS --> PLAN
+  GIS --> EAM
+  GIS --> CIS
+  GIS --> AMI
+  GIS --> DERMS
+
+  %% Cross-links between domains
+  ADMS --> OMS
+  ADMS --> SCADA
+  SCADA --> ADMS
+  FIELD --> GIS
+  FIELD --> EAM
+  AMI --> CIS
+  CIS --> OMS
+  DERMS --> ADMS
+
+  %% Dashed feedback loops back into GIS for spatiotemporal analysis
+  OMS -. outage / event history .-> GIS
+  ADMS -. switching / study results .-> GIS
 ```
 
 - **GIS at the center**
