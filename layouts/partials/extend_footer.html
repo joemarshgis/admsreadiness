@@ -1,4 +1,3 @@
-{{ if .Page.Store.Get "hasMermaid" }}
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 
@@ -6,10 +5,17 @@
     document.body.classList.contains('dark') ? 'dark' : 'default';
 
   const renderMermaid = async () => {
+    const blocks = document.querySelectorAll('.mermaid');
+    if (!blocks.length) return;
+
     mermaid.initialize({
       startOnLoad: false,
       theme: getTheme(),
       securityLevel: 'loose'
+    });
+
+    blocks.forEach((el) => {
+      el.removeAttribute('data-processed');
     });
 
     await mermaid.run({
@@ -20,9 +26,6 @@
   renderMermaid();
 
   const observer = new MutationObserver(() => {
-    document.querySelectorAll('.mermaid').forEach((el) => {
-      el.removeAttribute('data-processed');
-    });
     renderMermaid();
   });
 
@@ -31,4 +34,3 @@
     attributeFilter: ['class']
   });
 </script>
-{{ end }}
