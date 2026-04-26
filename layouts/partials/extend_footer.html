@@ -2,14 +2,16 @@
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 
-  const getTheme = () => document.body.classList.contains('dark') ? 'dark' : 'default';
+  const getTheme = () =>
+    document.body.classList.contains('dark') ? 'dark' : 'default';
 
   const renderMermaid = async () => {
     mermaid.initialize({
-      startOnLoad: true,
+      startOnLoad: false,
       theme: getTheme(),
       securityLevel: 'loose'
     });
+
     await mermaid.run({
       querySelector: '.mermaid'
     });
