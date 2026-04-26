@@ -11,204 +11,181 @@ categories:
   - Architecture
 ---
 
-# GIS in the Center: The Architecture Utilities Actually Operate On
+Utilities often talk about “integrated systems,” but in practice most integrations already revolve around one platform: GIS. Not as a mapping tool—but as the operational system of record that defines how the grid actually exists.
 
-Utilities often talk about “integrated systems,” but in practice,
-most integrations already revolve around one platform:
+The reality behind the diagram
+The diagram in this post is closer to how utilities actually operate than most vendor slideware:
 
-**GIS.**
+GIS is in the center as the system of record for the network model.
 
-Not as a mapping tool—but as the operational system of record
-that defines how the grid actually exists.
+OMS, ADMS, SCADA, DERMS, field, planning, asset, CIS, and AMI/MDMS all radiate out from that center.
 
-<div style="margin: 1.5rem 0;">
-  <img
-    src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/ec0e46fada53e0ecb01ce0756b6d7c70fd69f9fb.jpg"
-    alt="Utility grid operations control room"
-    style="display: block; width: 100%; max-width: 960px; height: 360px; object-fit: cover; margin: 0 auto; border-radius: 8px;"
-    loading="lazy"
-  >
-</div>
+A few systems have dashed feedback loops back into GIS, where it makes sense to feed data and results into spatial and engineering analysis.
 
-## The Reality of Utility Architecture
+If you treat this as just another “IT architecture picture,” you miss the point. It’s really a statement about data ownership and operational responsibility.
 
+Why GIS ends up in the middle
 Modern utilities run a complex ecosystem of systems:
 
-- OMS
-- ADMS / DMS
-- SCADA
-- DERMS
-- Engineering Analysis
-- Distribution Planning
-- Asset Management (EAM / APM)
-- Mobile Workforce / Field Mobility
-- Work Management
-- CIS
-- AMI / MDMS
+OMS
 
-On architecture diagrams, these systems are often drawn in neat layers
-or point-to-point integrations.
+ADMS / DMS
 
-In the real world, they all depend on **the same foundational data**:
-the electric network model.
+SCADA
 
-That model lives in GIS.
+DERMS
 
-## Why GIS Ends Up in the Middle
+Engineering analysis tools
 
-GIS uniquely combines:
+Distribution planning tools
 
-- **Connectivity** – how assets are electrically connected
-- **Topology** – upstream/downstream relationships
-- **Attribution** – phase, voltage, conductor, device status
-- **Spatial accuracy** – where assets physically exist
-- **Asset identity** – consistent IDs across systems
+Asset management (EAM / APM)
 
-No other system maintains *all* of these together.
+Mobile workforce / field mobility / work management
 
-As a result:
+CIS
 
-- OMS consumes GIS connectivity and device modeling
-- ADMS requires accurate phasing and feeder models
-- SCADA references GIS asset IDs and locations
-- DERMS depends on spatial and electrical context
-- Engineering tools rely on GIS for as-built conditions
-- Field mobility systems synchronize work against GIS features
+AMI / MDMS
 
-Whether intentional or not, **GIS becomes the hub**.
+On paper, you can draw these as neat layers. In reality, they all depend on the same foundational data: the distribution network model. That model lives in GIS.
 
-## A Practical “GIS-in-the-Center” Model
+GIS is the only place where all of these coexist in one model:
 
-<div style="margin: 1.5rem 0;">
-  <img
-    src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/e10881d545c4e2bea93cd9c015151508b83b6279.jpg"
-    alt="Utility GIS network model map"
-    style="display: block; width: 100%; max-width: 960px; height: 320px; object-fit: cover; margin: 0 auto; border-radius: 8px;"
-    loading="lazy"
-  >
-</div>
+Connectivity – how assets are actually connected.
 
-A more honest architecture diagram looks like this:
+Topology – upstream/downstream relationships.
 
-```mermaid
-flowchart TB
-  GIS["GIS<br/>System of Record"]
+Attribution – phase, voltage, conductor, device details.
 
-  subgraph Ops["Operations"]
-    OMS["OMS"]
-    ADMS["ADMS / DMS"]
-    SCADA["SCADA"]
-    FIELD["Field Mobility / Work Mgmt"]
-  end
+Spatial accuracy – where assets physically exist.
 
-  subgraph Planning["Planning & Analysis"]
-    ENG["Engineering Analysis"]
-    PLAN["Distribution Planning"]
-  end
+Asset identity – stable IDs that other systems can reference.
 
-  subgraph Enterprise["Enterprise & Customer"]
-    EAM["Asset Management"]
-    CIS["CIS"]
-    AMI["AMI / MDMS"]
-    DERMS["DERMS"]
-  end
+No other system maintains all of that together. As a result:
 
-  %% GIS as the hub (outbound)
-  GIS --> OMS
-  GIS --> ADMS
-  GIS --> SCADA
-  GIS --> FIELD
-  GIS --> ENG
-  GIS --> PLAN
-  GIS --> EAM
-  GIS --> CIS
-  GIS --> AMI
-  GIS --> DERMS
+OMS consumes GIS connectivity and device modeling.
 
-  %% Cross-links between domains
-  ADMS --> OMS
-  ADMS --> SCADA
-  SCADA --> ADMS
-  FIELD --> GIS
-  FIELD --> EAM
-  AMI --> CIS
-  CIS --> OMS
-  DERMS --> ADMS
+ADMS depends on accurate phasing and feeder models.
 
-  %% Dashed feedback loops back into GIS for spatiotemporal analysis
-  OMS -. outage / event history .-> GIS
-  ADMS -. switching / study results .-> GIS
-```
+SCADA references GIS asset IDs and locations.
 
-- **GIS at the center**
-- All operational and analytical systems integrating outward
-- Data flowing *from* GIS to consuming systems
-- Select feedback loops returning status or measurements
+DERMS needs spatial and electrical context.
 
-In this model:
-- GIS is authoritative for structure, connectivity, and attributes
-- Other systems are authoritative for:
-  - Real-time telemetry
-  - Outage states
-  - Switching operations
-  - Analytics and forecasting
+Engineering and planning tools rely on GIS for as‑built conditions.
 
-This separation of responsibility is critical.
+Field systems synchronize work against GIS features.
 
-## Where Utilities Run Into Trouble
+Whether intentional or not, GIS becomes the hub the rest of the ecosystem orbits around.
 
-Problems arise when GIS is treated as:
+Reading the diagram like an operator, not an architect
+The diagram breaks that hub‑and‑spoke reality into three views that execs and program leaders can use:
 
-- A passive map
-- A downstream reporting tool
-- “Good enough” for operations
+Operations – OMS, ADMS/DMS, SCADA, field/work management.
 
-Common failure points include:
-- Self-intersecting or disconnected lines
-- Missing or invalid phase designation
-- Invalid or missing operating voltage
-- Inconsistent feeder boundaries
-- Null or duplicate facility IDs
+Solid arrows from GIS show where those systems take their model and context from.
 
-These issues don’t just affect GIS—they cascade into:
-- ADMS model failures
-- OMS prediction inaccuracies
-- SCADA mismatches
-- Field crew confusion
-- Longer restoration times
+Cross‑links between OMS, ADMS, and SCADA reflect how those systems have to agree on the same network model to support switching, FLISR, outage prediction, and DER operations.
 
-## What Actually Works
+Planning & analysis – engineering studies and distribution planning.
 
-Utilities that succeed tend to do three things:
+They pull the as‑built model from GIS, run studies, and inform future changes.
 
-### 1. Treat GIS as a Production System
-GIS changes are controlled, validated, and aligned to operations—
-not edited casually.
+Their results can feed back into GIS when planners modify how the network should be built or operated.
 
-### 2. Perform Data Readiness Assessments
-Before OMS or ADMS implementations or upgrades, they assess:
-- Network connectivity
-- Phase and voltage integrity
-- Modeling consistency
-- Attribute completeness
+Enterprise & customer – EAM, CIS, AMI/MDMS, DERMS.
 
-### 3. Design Architecture Around Data Ownership
+EAM tracks the lifecycle of the same assets GIS locates and connects.
+
+CIS and AMI/MDMS rely on accurate customer‑to‑meter and meter‑to‑network relationships.
+
+DERMS needs the GIS/ADMS model to understand where DERs really sit on the grid.
+
+The dashed arrows back into GIS—from OMS and ADMS in your diagram—represent feedback loops where it actually makes sense to bring data and results back into the spatial model:
+
+Outage and event history, so you can analyze where the system is fragile or recurring problems cluster.
+
+Switching and study results, so you can do spatiotemporal analysis of how the network is operated versus how it was designed.
+
+That’s where executives and directors start seeing value beyond “integration for its own sake”: you get a model that supports continuous learning about the system, not just a one‑time ADMS go‑live.
+
+Where utilities get into trouble
+The architecture itself is not the problem. Utilities run into trouble when GIS is treated as:
+
+A passive map.
+
+A downstream reporting tool.
+
+“Good enough” for operations.
+
+Common failure patterns:
+
+Self‑intersecting or disconnected lines.
+
+Missing or invalid phase designation.
+
+Invalid or missing operating voltage.
+
+Inconsistent feeder boundaries.
+
+Null or duplicate facility IDs.
+
+Those issues don’t stay in GIS—they show up as:
+
+ADMS model failures and bad power flow results.
+
+OMS prediction inaccuracies.
+
+SCADA mismatches and suspect alarms.
+
+Field crews not trusting what they see on the screen.
+
+Longer restoration times and more operational risk.
+
+What actually works in practice
+Utilities that succeed with ADMS, DERMS, and grid modernization generally do three things:
+
+Treat GIS as a production system
+
+GIS changes are controlled, validated, and aligned to operations, not edited casually.
+
+There is a clear owner for “what is the network model?” and how it gets updated.
+
+Perform real data readiness assessments
+Before ADMS, DERMS, or OMS upgrades they deliberately assess:
+
+Network connectivity and topology.
+
+Phase and voltage integrity.
+
+Modeling consistency (devices, conductors, equipment).
+
+Attribute completeness for the functions they care about.
+
+This is not a one‑time cleanup; it becomes a recurring discipline.
+
+Design architecture around data ownership, not software logos
 Instead of “everyone owns everything,” they define:
-- GIS owns structure and connectivity
-- Operational systems consume and enhance—but don’t redefine—the model
 
-## The Bottom Line
+GIS: authoritative for structure, connectivity, and core attributes.
 
-Utilities don’t need *more* integrations.
-They need a **stronger center**.
+ADMS/OMS/SCADA: authoritative for real‑time states, switching, and control.
 
-When GIS is treated as the authoritative network model—
-and architected accordingly—
-every downstream system performs better.
+DERMS and analytics: authoritative for specific optimization and forecasting use cases.
 
-Not because GIS does more,
-but because it finally does what it’s uniquely positioned to do.
+Integration flows respect those boundaries. Systems consume and enhance the model—they don’t silently redefine it.
 
----
+The executive takeaway
+You don’t need another architecture drawing. You need a stronger center.
 
-*If OMS, ADMS, or DERMS struggles feel familiar, the problem is often not the application—it's the data at the center.*
+When GIS is treated as the authoritative network model—and the architecture is built around that reality—every downstream system performs better: ADMS, DERMS, OMS, SCADA, planning, and customer‑facing tools.
+
+If your ADMS, OMS, or DERMS initiatives feel harder than they should, the issue is often not the application—it’s the data and ownership model at the center. The diagram isn’t just a technical picture; it’s a reminder to decide, explicitly:
+
+What does GIS own?
+
+What does each operational system own?
+
+Where do we want feedback loops back into GIS so we can actually learn from how we operate the grid?
+
+Those are questions executives and program leaders can act on—without having to debug the diagram itself.
+
