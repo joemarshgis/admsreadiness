@@ -1,0 +1,241 @@
+---
+title: "Grid Operations Glossary: GIS, OMS, ADMS, DERMS, and Friends"
+date: 2026-04-20
+draft: false
+tags:
+  - GIS
+  - utilities
+  - ADMS
+  - OMS
+  - DERMS
+  - glossary
+categories:
+  - Foundations
+cover:
+  image: "/images/substation.jpg"
+  alt: "Electrical utility substation at sunset"
+  caption: "Before you draw the architecture, you need a shared vocabulary."
+---
+
+Before we talk about **GIS in the center** of utility architecture, it helps to make sure we’re speaking the same language.
+
+Most ADMS and grid modernization conversations are full of acronyms—GIS, OMS, ADMS, SCADA, DERMS, MDMS, EAM—that mean one thing to the vendor slideware, and something slightly different to the people who actually operate the grid.
+
+This post is a working glossary for the terms I use across ADMS Readiness. It’s written for executives, program leaders, and adjacent teams who need to understand the concepts without living in them all day.
+
+![Electrical utility substation at sunset](/images/substation.jpg)
+
+---
+
+## GIS – Geographic Information System
+
+**What it is:**  
+The system that maintains the **authoritative network model**: assets, connectivity, and location.
+
+**What it owns:**
+
+- Asset locations (substations, feeders, devices, lines, transformers).
+- Connectivity and topology (how things are actually wired and sectionalized).
+- Core attributes (phase, voltage, conductor, device types, IDs).
+
+**Why it matters:**  
+Every downstream system that “thinks” about the network—OMS, ADMS, DERMS, planning, analytics—depends on GIS being accurate enough to trust.
+
+---
+
+## OMS – Outage Management System
+
+**What it is:**  
+The system that manages **customer outages**: predicting which devices/customers are out, managing restoration steps, and communicating status.
+
+**What it does:**
+
+- Outage prediction from customer calls and AMI events.
+- Device-level switching to isolate and restore.
+- Estimated restoration times and communications.
+
+**Why it depends on GIS:**  
+OMS needs the **connectivity model** from GIS to know which customers hang off which devices and feeders.
+
+---
+
+## ADMS / DMS – Advanced Distribution Management System
+
+**What it is:**  
+The system for **operating the distribution grid**: switching, real-time analysis, power flows, and advanced automation.
+
+**What it does:**
+
+- Real-time network model and states.
+- Power flow calculations and contingency analysis.
+- FLISR, VVO/CVR, fault location, and switching support.
+
+**Why it depends on GIS:**
+
+- Needs accurate network topology, phasing, and device modeling.
+- Uses a variant of the GIS model as its **operations-grade** network model.
+
+![Utility grid control room with operators and large wall displays](/images/controlroom.jpg)
+
+---
+
+## SCADA – Supervisory Control and Data Acquisition
+
+**What it is:**  
+The system that reads **real-time telemetry** and sends **control commands** to field devices.
+
+**What it does:**
+
+- Collects analogs and statuses from RTUs, IEDs, and intelligent devices.
+- Executes open/close commands and setpoint changes.
+- Feeds real-time values into ADMS, EMS, and other operational systems.
+
+**Why it touches GIS:**  
+SCADA points are often mapped back to GIS assets and locations for visualization and analysis, even if SCADA itself doesn’t own the spatial model.
+
+---
+
+## DERMS – Distributed Energy Resources Management System
+
+**What it is:**  
+The system that coordinates **distributed energy resources** (DERs) on the distribution grid: rooftop solar, batteries, EVs, flexible loads, and more.
+
+**What it does:**
+
+- Manages DER registrations, capabilities, and constraints.
+- Coordinates DER dispatch and curtailment.
+- Ensures DER behavior fits within feeder and network limits.
+
+**Why it depends on GIS/ADMS:**
+
+- Needs to know **where** DERs sit electrically and geographically.
+- Needs a consistent network model to understand impacts on feeders and circuits.
+
+---
+
+## AMI / MDMS – Advanced Metering Infrastructure & Meter Data Management
+
+**What they are:**
+
+- **AMI:** The metering network—smart meters, communications, head-end systems.
+- **MDMS:** The system that stores and manages **meter data** at scale.
+
+**What they do:**
+
+- Collect interval consumption and power quality data.
+- Detect outages and restorations via last-gasp and first-breath.
+- Feed data to billing, analytics, OMS, and planning.
+
+**Why they depend on GIS:**
+
+- Customer-to-meter and meter-to-network relationships are grounded in the GIS model.
+- Spatial and topological context turns raw meter data into operational insight.
+
+---
+
+## CIS – Customer Information System
+
+**What it is:**  
+The system of record for **customers, accounts, and billing**.
+
+**What it does:**
+
+- Manages customer accounts, billing, and payments.
+- Tracks service locations and basic service attributes.
+- Interfaces with field work, credit/collections, and contact centers.
+
+**Why it touches GIS:**
+
+- Service locations need to be mapped to network assets.
+- Customer-facing outages and notifications rely on GIS-based network context.
+
+---
+
+## EAM / APM – Enterprise Asset Management & Asset Performance Management
+
+**What they are:**
+
+- **EAM:** The system that tracks **asset lifecycle**—from installation to retirement.
+- **APM:** Tools that analyze **asset health and risk**.
+
+**What they do:**
+
+- Manage work orders, inspections, and maintenance plans.
+- Store asset history, condition, and risk metrics.
+- Support capital planning and reliability programs.
+
+**Why they depend on GIS:**
+
+- Assets exist in space and on circuits; GIS is where those relationships live.
+- Reliability and risk analysis often depends on spatial/topological clustering.
+
+---
+
+## Field / Mobile Workforce / Work Management
+
+**What it is:**  
+The tools that crews use to **see the system and execute work** in the field.
+
+**What they do:**
+
+- Show maps, devices, and work orders on mobile devices.
+- Capture as-built updates from the field.
+- Coordinate switching, inspections, and repairs.
+
+**Why they depend on GIS:**
+
+- The map and asset context come from the GIS network model.
+- As-built updates must flow back into GIS to keep the model honest.
+
+![Utility worker in bucket truck repairing electrical lines](/images/bucketruck.jpg)
+
+---
+
+## Planning & Engineering Tools
+
+**What they are:**  
+
+- Distribution planning tools.
+- Engineering analysis tools (load flow, fault studies, protection, etc.).
+
+**What they do:**
+
+- Run studies on feeder loading, voltage, and reliability.
+- Evaluate future scenarios and project impacts.
+- Support capital project scoping and design.
+
+**Why they depend on GIS:**
+
+- Studies are only as good as the network model they start with.
+- GIS is the as-built representation of what’s actually in the field.
+
+---
+
+## “Authoritative Network Model”
+
+A phrase I use a lot.
+
+**What it means:**  
+The **single, trusted representation** of how the distribution system is actually built and connected—assets, connectivity, and attributes.
+
+**Why it matters:**
+
+- ADMS, OMS, DERMS, SCADA, planning, and analytics must all line up on the same underlying model to produce consistent results.
+- If different systems quietly drift from each other, you get prediction failures, bad studies, and crews that stop trusting the tools.
+
+For most utilities, GIS is where that authoritative model either lives—or should live.
+
+---
+
+## How this glossary connects to “GIS in the Center”
+
+In the next post, I use a simple diagram to show GIS at the center with OMS, ADMS, SCADA, DERMS, planning, and enterprise systems around it.
+
+This glossary is the **on-ramp** to that diagram:
+
+- If you’re an operator or GIS practitioner, you already live in these terms—use this as a sanity check.
+- If you’re an executive, project sponsor, or adjacent leader, this should give you enough context to follow the architecture conversation without getting lost in alphabet soup.
+
+If you want to jump ahead, you can read the follow-up here:
+
+- [GIS in the Center: The Architecture Utilities Actually Operate On](/posts/gis-in-the-center/)
