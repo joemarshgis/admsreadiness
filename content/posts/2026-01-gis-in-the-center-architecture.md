@@ -25,44 +25,12 @@ The diagram in this post is closer to how utilities actually operate than most v
 flowchart TB
   GIS["GIS<br/>(Authoritative Network Model)"]:::center
 
-  subgraph OPS["Operations"]
-    direction LR
-    OMS["OMS"]
-    ADMS["ADMS / DMS"]
-    SCADA["SCADA"]
-    FIELD["Field / Work Mgmt"]
-  end
+  OPS["Operations<br/>OMS • ADMS/DMS • SCADA • Field"] --> GIS
+  GIS --> PLAN["Planning & Analysis<br/>Engineering Studies • Distribution Planning"]
+  GIS --> ENT["Enterprise & Customer<br/>EAM • CIS • AMI/MDMS • DERMS"]
 
-  subgraph PLAN["Planning & Analysis"]
-    direction LR
-    ENG["Engineering Studies"]
-    DISTPLAN["Distribution Planning"]
-  end
-
-  subgraph ENT["Enterprise & Customer"]
-    direction LR
-    EAM["EAM / Asset Mgmt"]
-    CIS["CIS"]
-    AMI["AMI / MDMS"]
-    DERMS["DERMS"]
-  end
-
-  OMS --> GIS
-  ADMS --> GIS
-  SCADA --> GIS
-  FIELD --> GIS
-
-  GIS --> ENG
-  GIS --> DISTPLAN
-
-  GIS --> EAM
-  GIS --> CIS
-  GIS --> AMI
-  GIS --> DERMS
-
-  OMS -. "Outage history / event analysis" .-> GIS
-  ADMS -. "Switching / study feedback" .-> GIS
-  ENG -. "Planning outputs / design updates" .-> GIS
+  OPS -. "Operational feedback" .-> GIS
+  PLAN -. "Planning updates" .-> GIS
 
   classDef center fill:#01696f,stroke:#0c4e54,color:#ffffff,stroke-width:2px;
 ```
