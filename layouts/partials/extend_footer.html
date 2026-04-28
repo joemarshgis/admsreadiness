@@ -23,7 +23,7 @@
     });
   };
 
-  renderMermaid();
+  document.addEventListener('DOMContentLoaded', renderMermaid);
 
   const observer = new MutationObserver(() => {
     renderMermaid();
