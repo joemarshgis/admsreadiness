@@ -35,7 +35,11 @@ If you'd like to connect about GIS, ADMS, OMS, DERMS, utility architecture, or d
 - LinkedIn: [Joseph Marsh on LinkedIn](https://www.linkedin.com/in/joemarshgis/)
 - Email: [joemarshgis@gmail.com](mailto:joemarshgis@gmail.com)
 
-## Subscribe
+## Subscribe {#subscribe}
+
+If you want new posts by email, subscribe below.
+
+{{< newsletter >}}
 
 If you prefer RSS, you can subscribe here:
 
