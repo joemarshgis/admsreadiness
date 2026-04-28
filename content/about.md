@@ -46,10 +46,6 @@ If you prefer RSS, you can subscribe here:
 - [RSS feed for ADMS Readiness](https://www.admsreadiness.com/index.xml)
 - [Posts feed](https://www.admsreadiness.com/posts/index.xml)
 
-If you want new posts by email, subscribe below.
-
-{{< newsletter >}}
-
 ## A note on perspective
 
 The views on this site are based on real-world experience across utility GIS, operational integrations, and grid modernization work. The focus here is not on abstract theory — it is on the patterns, decisions, and data issues that shape how utility systems actually perform.
