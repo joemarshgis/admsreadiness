@@ -15,6 +15,11 @@ cover:
   caption: "Modern utility operations depend on a shared network model."
 ---
 
+- I've written a precursory blog as a refresher for all of the utility acronyms. 
+- If you’re an operator or GIS practitioner, you already live in these terms—use this as a sanity check.
+- If you’re an executive, project sponsor, or adjacent leader, this should give you enough context to follow the architecture conversation without getting lost in alphabet soup.
+
+- [Grid Operations Glossary: GIS, OMS, ADMS, DERMS, and Friends](/posts/grid-operations-glossary/)
 Utilities often talk about “integrated systems,” but in practice most integrations already revolve around one platform: GIS. Not as a mapping tool—but as the operational system of record that defines how the grid actually exists.
 
 ## The reality behind the diagram
