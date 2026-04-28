@@ -36,3 +36,6 @@ A lot of conversations in this space focus on applications, platforms, or implem
 ## Connect
 
 If you work in utilities, GIS, ADMS, OMS, grid operations, or system modernization, I hope you find something useful here—and I’m always open to thoughtful conversations about where the industry is headed next.
+
+- LinkedIn: [Joseph Marsh on LinkedIn](https://www.linkedin.com/in/joemarshgis
+- Email: [joemarshgis@gmail.com](mailto:joemarshgis@gmail.com)

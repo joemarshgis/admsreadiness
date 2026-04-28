@@ -26,7 +26,12 @@ params:
     imageUrl: "images/joe-marsh-headshot.jpg"
     imageTitle: "Joe Marsh"
     imageWidth: 180
-    imageHeight: 180
+    imageHeight: 180 
+    socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/in/joemarshgis/"
+    - name: email
+      url: "mailto:joemarshgis@gmail.com"
     
 markup:
   goldmark:
