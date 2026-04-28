@@ -20,7 +20,35 @@ Utilities often talk about “integrated systems,” but in practice most integr
 ## The reality behind the diagram
 
 The diagram in this post is closer to how utilities actually operate than most vendor slideware:
+```mermaid
+flowchart LR
+    GIS["GIS (Network Model)"]:::center
 
+    OMS["OMS"]
+    ADMS["ADMS / DMS"]
+    SCADA["SCADA"]
+    DERMS["DERMS"]
+    FIELD["Field / Work Mgmt"]
+    PLAN["Planning / Engineering"]
+    EAM["EAM / Asset Mgmt"]
+    CIS["CIS"]
+    AMI["AMI / MDMS"]
+
+    GIS --> OMS
+    GIS --> ADMS
+    GIS --> SCADA
+    GIS --> DERMS
+    GIS --> FIELD
+    GIS --> PLAN
+    GIS --> EAM
+    GIS --> CIS
+    GIS --> AMI
+
+    OMS -. feedback .-> GIS
+    ADMS -. feedback .-> GIS
+
+    classDef center fill=#01696f,stroke=#0c4e54,color=#ffffff;
+```
 - GIS is in the center as the system of record for the network model.
 - OMS, ADMS, SCADA, DERMS, field, planning, asset, CIS, and AMI/MDMS all radiate out from that center.
 - A few systems have dashed feedback loops back into GIS, where it makes sense to feed data and results into spatial and engineering analysis.
