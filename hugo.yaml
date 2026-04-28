@@ -3,6 +3,8 @@ languageCode: "en-us"
 title: "ADMS Readiness"
 theme: "PaperMod"
 
+enableRobotsTXT: true
+
 menu:
   main:
     - identifier: about
@@ -13,12 +15,34 @@ menu:
       name: Posts
       url: /posts/
       weight: 20
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      weight: 30
 
 caches:
   images:
     dir: ":cacheDir/images"
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
+  env: production
+  description: "Thoughts on GIS, utility architecture, ADMS, OMS, and operational data readiness."
+  author: "Joe Marsh"
+  keywords:
+    - GIS
+    - ADMS
+    - OMS
+    - Utilities
+    - Utility Architecture
+    - Operational Data
+    - Grid Modernization
+
   profileMode:
     enabled: true
     title: "Joe Marsh"
@@ -26,13 +50,33 @@ params:
     imageUrl: "images/joe-marsh-headshot.jpg"
     imageTitle: "Joe Marsh"
     imageWidth: 180
-    imageHeight: 180 
-    socialIcons:
+    imageHeight: 180
+    buttons:
+      - name: Posts
+        url: /posts/
+      - name: About
+        url: /about/
+
+  socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/in/joemarshgis/"
     - name: email
       url: "mailto:joemarshgis@gmail.com"
-    
+    - name: rss
+      url: "/index.xml"
+
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowShareButtons: true
+  ShareButtons:
+    - linkedin
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowRssButtonInSectionTermList: true
+  ShowCodeCopyButtons: false
+  ShowToc: true
+  TocOpen: false
+
 markup:
   goldmark:
     renderer:
