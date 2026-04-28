@@ -60,11 +60,12 @@ flowchart TB
   GIS --> AMI
   GIS --> DERMS
 
-  OMS -. outage history .-> GIS
-  ADMS -. switching / study feedback .-> GIS
+  OMS -. "Outage history / event analysis" .-> GIS
+  ADMS -. "Switching / study feedback" .-> GIS
+  ENG -. "Planning outputs / design updates" .-> GIS
 
   classDef center fill:#01696f,stroke:#0c4e54,color:#ffffff,stroke-width:2px;
-'''
+```
 
 - GIS is in the center as the system of record for the network model.
 - OMS, ADMS, SCADA, DERMS, field, planning, asset, CIS, and AMI/MDMS all radiate out from that center.
@@ -220,8 +221,8 @@ Those are questions executives and program leaders can act on—without having t
 
 If you prefer RSS, you can subscribe here:
 
-- [RSS feed for ADMS Readiness](https://joemarshgis.github.io/admsreadiness/index.xml)
-- [Posts feed](https://joemarshgis.github.io/admsreadiness/posts/index.xml)
+- [RSS feed for ADMS Readiness](https://www.admsreadiness.com/index.xml)
+- [Posts feed](https://www.admsreadiness.com/posts/index.xml)
 
 If you want new posts by email, subscribe below.
 
