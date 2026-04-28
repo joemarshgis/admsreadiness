@@ -43,8 +43,8 @@ If you want new posts by email, subscribe below.
 
 If you prefer RSS, you can subscribe here:
 
-- [RSS feed for ADMS Readiness](https://joemarshgis.github.io/admsreadiness/index.xml)
-- [Posts feed](https://joemarshgis.github.io/admsreadiness/posts/index.xml)
+- [RSS feed for ADMS Readiness](https://www.admsreadiness.com/index.xml)
+- [Posts feed](https://www.admsreadiness.com/posts/index.xml)
 
 If you want new posts by email, subscribe below.
 
