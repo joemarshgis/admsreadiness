@@ -169,3 +169,15 @@ If your ADMS, OMS, or DERMS initiatives feel harder than they should, the issue 
 - Where do we want feedback loops back into GIS so we can actually learn from how we operate the grid?
 
 Those are questions executives and program leaders can act on—without having to debug the diagram itself.
+
+
+## Subscribe
+
+If you prefer RSS, you can subscribe here:
+
+- [RSS feed for ADMS Readiness](https://joemarshgis.github.io/admsreadiness/index.xml)
+- [Posts feed](https://joemarshgis.github.io/admsreadiness/posts/index.xml)
+
+If you want new posts by email, subscribe below.
+
+{{< newsletter >}}
