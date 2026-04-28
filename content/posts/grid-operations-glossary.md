@@ -238,4 +238,4 @@ This glossary is the **on-ramp** to that diagram:
 
 If you want to jump ahead, you can read the follow-up here:
 
-- [GIS in the Center: The Architecture Utilities Actually Operate On](/posts/gis-in-the-center/)
+- [GIS in the Center: The Architecture Utilities Actually Operate On](/posts/2026-01-gis-in-the-center-architecture/)
