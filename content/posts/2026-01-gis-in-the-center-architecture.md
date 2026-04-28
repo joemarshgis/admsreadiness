@@ -21,6 +21,7 @@ Utilities often talk about “integrated systems,” but in practice most integr
 
 The diagram in this post is closer to how utilities actually operate than most vendor slideware:
 
+```mermaid
 flowchart TB
   GIS["GIS<br/>(Authoritative Network Model)"]:::center
 
@@ -64,6 +65,7 @@ flowchart TB
   ENG -. "Planning outputs / design updates" .-> GIS
 
   classDef center fill:#01696f,stroke:#0c4e54,color:#ffffff,stroke-width:2px;
+  '''
 
 - GIS is in the center as the system of record for the network model.
 - OMS, ADMS, SCADA, DERMS, field, planning, asset, CIS, and AMI/MDMS all radiate out from that center.
