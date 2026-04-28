@@ -21,34 +21,49 @@ Utilities often talk about “integrated systems,” but in practice most integr
 
 The diagram in this post is closer to how utilities actually operate than most vendor slideware:
 
-```mermaid
-flowchart LR
-  GIS["GIS (Network Model)"]:::center
-  OMS["OMS"]
-  ADMS["ADMS / DMS"]
-  SCADA["SCADA"]
-  DERMS["DERMS"]
-  FIELD["Field / Work Mgmt"]
-  PLAN["Planning / Engineering"]
-  EAM["EAM / Asset Mgmt"]
-  CIS["CIS"]
-  AMI["AMI / MDMS"]
+flowchart TB
+  GIS["GIS<br/>(Authoritative Network Model)"]:::center
 
-  GIS --> OMS
-  GIS --> ADMS
-  GIS --> SCADA
-  GIS --> DERMS
-  GIS --> FIELD
-  GIS --> PLAN
+  subgraph OPS["Operations"]
+    direction LR
+    OMS["OMS"]
+    ADMS["ADMS / DMS"]
+    SCADA["SCADA"]
+    FIELD["Field / Work Mgmt"]
+  end
+
+  subgraph PLAN["Planning & Analysis"]
+    direction LR
+    ENG["Engineering Studies"]
+    DISTPLAN["Distribution Planning"]
+  end
+
+  subgraph ENT["Enterprise & Customer"]
+    direction LR
+    EAM["EAM / Asset Mgmt"]
+    CIS["CIS"]
+    AMI["AMI / MDMS"]
+    DERMS["DERMS"]
+  end
+
+  OMS --> GIS
+  ADMS --> GIS
+  SCADA --> GIS
+  FIELD --> GIS
+
+  GIS --> ENG
+  GIS --> DISTPLAN
+
   GIS --> EAM
   GIS --> CIS
   GIS --> AMI
+  GIS --> DERMS
 
-  OMS -.-> GIS
-  ADMS -.-> GIS
+  OMS -. "Outage history / event analysis" .-> GIS
+  ADMS -. "Switching / study feedback" .-> GIS
+  ENG -. "Planning outputs / design updates" .-> GIS
 
-  classDef center fill:#01696f,stroke:#0c4e54,color:#ffffff;
-```
+  classDef center fill:#01696f,stroke:#0c4e54,color:#ffffff,stroke-width:2px;
 
 - GIS is in the center as the system of record for the network model.
 - OMS, ADMS, SCADA, DERMS, field, planning, asset, CIS, and AMI/MDMS all radiate out from that center.
