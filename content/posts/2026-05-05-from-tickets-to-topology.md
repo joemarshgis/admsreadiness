@@ -7,7 +7,6 @@ cover:
   image: "/images/oms-network-model/outdoor-power-substation.jpg"
   alt: "Outdoor power substation"
   caption: "How well your OMS performs depends on how well your network model matches reality."
-
 ---
 
 ## OMS is only as good as its model
