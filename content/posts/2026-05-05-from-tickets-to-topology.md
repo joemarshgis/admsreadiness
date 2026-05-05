@@ -1,7 +1,7 @@
 ---
 title: "From Tickets to Topology: Designing OMS Integrations Around the Network Model"
-date: 2026-05-05T10:00:00-04:00
-draft: true
+date: 2026-05-05
+draft: false
 tags: ["OMS", "GIS", "ADMS", "Integration"]
 cover:
   image: "/images/oms-network-model/outdoor-power-substation.jpg"
