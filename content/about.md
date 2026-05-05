@@ -49,3 +49,9 @@ If you prefer RSS, you can subscribe here:
 ## A note on perspective
 
 The views on this site are based on real-world experience across utility GIS, operational integrations, and grid modernization work. The focus here is not on abstract theory — it is on the patterns, decisions, and data issues that shape how utility systems actually perform.
+
+## Disclaimer
+
+The views and opinions expressed on this site are my own and do not necessarily reflect the views, policies, or positions of my employer, any former employer, or any client organization.
+
+Nothing on this site is intended to disclose confidential, proprietary, or non-public information. Examples and observations are based on public information, generalized industry experience, or anonymized scenarios, and are shared in a personal capacity with respect for applicable NDA and confidentiality obligations.

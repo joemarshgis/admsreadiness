@@ -1,0 +1,33 @@
+<footer class="footer">
+  <span>
+    &copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a>
+  </span>
+  <span>
+    · Views expressed here are my own and do not represent my employer, former employers, or clients.
+  </span>
+</footer>
+
+{{- partial "extend_footer.html" . -}}
+
+<script>
+  let menu = document.getElementById('menu')
+  if (menu) {
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+      localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      var id = this.getAttribute("href").substr(1);
+      var target = document.querySelector(`[id='${decodeURIComponent(id)}']`);
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+</script>
