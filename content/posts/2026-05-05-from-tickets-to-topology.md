@@ -11,7 +11,7 @@ cover:
 
 ## OMS is only as good as its model
 
-At Hometown Electric and Light in Hometown ABC, one of the worst recent outages on paper didn’t look that bad. A single feeder issue on a calm day. The OMS confidently drew an outage polygon, identified a likely fault location, and generated work. Crews rolled, calls came in, and everyone expected a quick restore.  
+At Hometown Electric and Light in Hometown, USA, one of the worst recent outages on paper didn’t look that bad. A single feeder issue on a calm day. The OMS confidently drew an outage polygon, identified a likely fault location, and generated work. Crews rolled, calls came in, and everyone expected a quick restore.  
 
 What actually happened was a mess. The predicted fault location was off by a lateral, customers at the edge of the event never showed up in the OMS view, and dispatch ended up relying on a mix of calls, SCADA, and handwritten notes to figure out what was really out. Nothing was wrong with the OMS engine itself. The problem was that the network model it trusted did not match what was actually built and operated in the field.
 
