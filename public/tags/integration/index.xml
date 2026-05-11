@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Integration on ADMS Readiness</title>
+    <link>http://localhost:1313/tags/integration/</link>
+    <description>Recent content in Integration on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/integration/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Tickets to Topology: Designing OMS Integrations Around the Network Model</title>
+      <link>http://localhost:1313/posts/2026-05-05-from-tickets-to-topology/</link>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-05-05-from-tickets-to-topology/</guid>
+      <description>&lt;h2 id=&#34;oms-is-only-as-good-as-its-model&#34;&gt;OMS is only as good as its model&lt;/h2&gt;&#xA;&lt;p&gt;At Hometown Electric and Light in Hometown, USA, one of the worst recent outages on paper didn’t look that bad. A single feeder issue on a calm day. The OMS confidently drew an outage polygon, identified a likely fault location, and generated work. Crews rolled, calls came in, and everyone expected a quick restore.&lt;/p&gt;&#xA;&lt;p&gt;What actually happened was a mess. The predicted fault location was off by a lateral, customers at the edge of the event never showed up in the OMS view, and dispatch ended up relying on a mix of calls, SCADA, and handwritten notes to figure out what was really out. Nothing was wrong with the OMS engine itself. The problem was that the network model it trusted did not match what was actually built and operated in the field.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

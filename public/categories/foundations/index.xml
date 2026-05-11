@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foundations on ADMS Readiness</title>
+    <link>http://localhost:1313/categories/foundations/</link>
+    <description>Recent content in Foundations on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/foundations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grid Operations Glossary: GIS, OMS, ADMS, DERMS, and Friends</title>
+      <link>http://localhost:1313/posts/grid-operations-glossary/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/grid-operations-glossary/</guid>
+      <description>&lt;p&gt;Before we talk about &lt;strong&gt;GIS in the center&lt;/strong&gt; of utility architecture, it helps to make sure we’re speaking the same language.&lt;/p&gt;&#xA;&lt;p&gt;Most ADMS and grid modernization conversations are full of acronyms—GIS, OMS, ADMS, SCADA, DERMS, MDMS, EAM—that mean one thing to the vendor slideware, and something slightly different to the people who actually operate the grid.&lt;/p&gt;&#xA;&lt;p&gt;This post is a working glossary for the terms I use across ADMS Readiness. It’s written for executives, program leaders, and adjacent teams who need to understand the concepts without living in them all day.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
