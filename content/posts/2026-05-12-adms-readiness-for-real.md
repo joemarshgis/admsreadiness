@@ -4,8 +4,8 @@ date: 2026-05-12T10:00:00-04:00
 draft: false
 tags: ["ADMS", "GIS", "Readiness", "Integration"]
 cover:
-  image: "/images/adms-readiness/substation-cover.jpg"
-  alt: "Distribution substation yard at sunset"
+  image: "/images/adms-readiness/desert-pole.jpg"
+  alt: "Utility pole in desert"
   caption: "Integration does not mean data is loaded, it means model is ready and trusted by operators."
 ---
 
