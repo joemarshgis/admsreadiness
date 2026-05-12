@@ -17,7 +17,7 @@ ADMS projects are huge undertakings that pull in people from operations, protect
 
 ## What ADMS actually needs from GIS
 
-![Outdoor power substation](/images/adms-readiness/outdoor-substation.jpg)
+![Utility pole at sunset](/images/adms-readiness/sunset-pole.jpg)
 
 For ADMS, GIS isn’t just a background map. It’s the starting point for the network model that the system uses to reason about switching, outages, and power flows. That means a few things have to be true before you can call the GIS→ADMS integration “ready.”
 
