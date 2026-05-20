@@ -1,6 +1,6 @@
 title: "SCADA Meets the Map: Making GIS–SCADA Integration Useful in the Control Room"
 date: 2026-05-19T10:00:00-04:00
-draft: true
+draft: false
 tags: ["SCADA", "GIS", "ADMS", "Operations"]
 cover:
   image: "/images/scada-gis/power-lines-sunset.jpg"
