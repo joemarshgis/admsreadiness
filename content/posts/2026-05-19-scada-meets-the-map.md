@@ -4,14 +4,14 @@ date: 2026-05-19T10:00:00-04:00
 draft: false
 tags: ["SCADA", "GIS", "ADMS", "Operations"]
 cover:
-  image: "/images/scada-gis/power-lines-sunset.jpg"
-  alt: "Power lines at sunset"
+  image: "/images/scada-gis/dam.jpg"
+  alt: "Boundary Dam"
   caption: "SCADA tells operators what is happening. GIS tells them where."
 ---
 
 ## Why operators care about maps
 
-![Transmission tower in rural landscape](/images/scada-gis/transmission-tower-rural.jpg)
+![Mountain landscape](/images/scada-gis/mountain.jpg)
 
 Most control rooms still live in SCADA point lists and one‑line diagrams. That works well when you know every device on your system by heart, but it's not great for spatial questions like "what exactly is under this storm cell?" or "where are all the open points on this feeder?" A screen full of alarms and tag names doesn't naturally show distance, access, or customer impact.
 
