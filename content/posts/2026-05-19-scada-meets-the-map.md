@@ -1,3 +1,4 @@
+---
 title: "SCADA Meets the Map: Making GIS–SCADA Integration Useful in the Control Room"
 date: 2026-05-19T10:00:00-04:00
 draft: false
