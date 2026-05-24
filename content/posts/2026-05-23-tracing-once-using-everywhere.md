@@ -40,7 +40,7 @@ It helps to keep three ideas separate. Export Subnetwork can return connectivity
 
 That third part is what makes the result export-friendly for OMS and ADMS.
 
-![Detailed network map with highlighted path](/images/network-detail.jpg)
+![Detailed network map with highlighted path](/images/network-detail.png)
 
 ## Why OMS and ADMS need different values
 
