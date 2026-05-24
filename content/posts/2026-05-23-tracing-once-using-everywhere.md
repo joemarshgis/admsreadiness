@@ -1,7 +1,7 @@
 ---
 title: "Tracing Once, Using Everywhere: Propagated Values for OMS and ADMS"
 date: 2026-05-23T20:18:00-07:00
-draft: true
+draft: false
 description: "Why propagated values in traces and Export Subnetwork can reduce custom extractor, ETL, and middleware logic for OMS and ADMS integrations."
 tags:
   - arcgis utility network
