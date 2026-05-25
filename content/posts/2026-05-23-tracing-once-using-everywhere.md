@@ -49,7 +49,7 @@ It helps to keep three ideas separate. Export Subnetwork can return connectivity
 
 That third part is what makes the result export‑friendly for OMS and ADMS.
 
-![ArcGIS Pro Utility Network pane screenshot](/images/network-detail.jpg) "Screenshot from ArcGIS Pro © Esri")
+![ArcGIS Pro Utility Network pane screenshot](/images/network-detail.png "Screenshot from ArcGIS Pro © Esri")
 
 ## Why OMS and ADMS need different values
 
