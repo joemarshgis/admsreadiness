@@ -165,59 +165,29 @@ Everything important sits on top of that model.
 
 ```mermaid
 flowchart TB
-  classDef gis fill:#d9ead3,stroke:#6aa84f,color:#111,stroke-width:1.5px;
-  classDef adms fill:#cfe2f3,stroke:#3d85c6,color:#111,stroke-width:1.5px;
-  classDef derms fill:#fce5cd,stroke:#e69138,color:#111,stroke-width:1.5px;
-  classDef shared fill:#f3f3f3,stroke:#999,color:#111,stroke-dasharray: 4 3;
+  classDef gis fill:#dbeafe,stroke:#1d4ed8,color:#111827,font-weight:bold;
+  classDef adms fill:#dcfce7,stroke:#16a34a,color:#111827,font-weight:bold;
+  classDef derms fill:#fef3c7,stroke:#d97706,color:#111827,font-weight:bold;
 
-  subgraph GIS["GIS"]
-    G1["Accountable: as-built network topology"]
-    G2["Accountable: asset attributes & ratings"]
-    G3["Consulted: operating constraints"]
-  end
+  GIS["GIS\nAs-built network model"]:::gis
+  ADMS["ADMS\nAs-operated grid & control"]:::adms
+  DERMS["DERMS\nDER coordination & optimization"]:::derms
 
-  subgraph ADMS["ADMS"]
-    A1["Accountable: as-operated network state"]
-    A2["Responsible: real-time operations"]
-    A3["Accountable: switching & operational limits"]
-  end
-
-  subgraph DERMS["DERMS"]
-    D1["Responsible: DER coordination"]
-    D2["Accountable: DER optimization logic"]
-    D3["Responsible: DER dispatch / setpoints"]
-  end
-
-  subgraph Shared["Shared governance"]
-    S1["Model synchronization"]
-    S2["DER interconnection updates"]
-    S3["Constraint definitions"]
-  end
-
-  class G1,G2,G3 gis;
-  class A1,A2,A3 adms;
-  class D1,D2,D3 derms;
-  class S1,S2,S3 shared;
-
-  G1 --> A1
-  G2 --> A3
-  G1 --> D1
-
-  A3 <--> D2
-  A2 <--> D3
-
-  G3 --> S3
-  A3 --> S3
-  D2 --> S3
-
-  G1 --> S1
-  A1 --> S1
-  D1 --> S1
-
-  G1 --> S2
-  D1 --> S2
-  A1 --> S2
+  GIS --> ADMS
+  GIS --> DERMS
+  ADMS <--> DERMS
 ```
+
+| Data / Decision Area | GIS | ADMS | DERMS |
+|----------------------|-----|------|-------|
+| Network topology (as-built) | A | C | C |
+| Network topology (as-operated) | C | A | C |
+| Asset ratings & equipment attributes | A | C | I |
+| DER interconnection / participation data | A | C | R |
+| Real-time grid operations | I | A/R | C |
+| DER optimization strategy & dispatch logic | I | C | A/R |
+| Constraint definitions & operating limits | C | A | R |
+| Model synchronization across platforms | A | R | R |
 
 Read the grid this way:
 
