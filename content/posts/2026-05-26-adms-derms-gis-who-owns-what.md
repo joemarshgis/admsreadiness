@@ -5,163 +5,257 @@ draft: false
 tags: ["ADMS", "DERMS", "GIS", "DER"]
 ---
 
+# ADMS vs DERMS vs GIS: Who Owns What in a High-DER Grid?
+
 ## The alphabet soup problem
 
-[Intro]
+In a high-DER grid, ADMS, DERMS, and GIS are all sometimes marketed as the system that will finally make the distribution network “smart.” That framing creates confusion, because these platforms are not interchangeable brains so much as distinct systems with different responsibilities, different time horizons, and different sources of truth.
 
-- ADMS, DERMS, GIS all pitched as the “brain.”
-- This is really a question of data and responsibility.
+The more useful question is not which platform is *the* brain, but which system owns which data, which operational decisions, and which model of the network. Once that boundary is clear, the architecture gets simpler, the integrations get cleaner, and governance becomes much easier to sustain.
 
 ## Clear roles in a high-DER architecture
 
-[Explain roles]
+A clean high-DER architecture starts by separating the **as-built**, **as-operated**, and **DER-optimized** views of the grid.
 
-- GIS: network model (as-built).
-- ADMS: as-operated view and control.
-- DERMS: DER coordination and optimization.
+### GIS: the as-built system of record
+
+GIS should own the authoritative representation of the physical distribution network:
+
+- Asset location and connectivity
+- Feeder, phase, and device relationships
+- Equipment attributes and ratings
+- Geospatial context for planning, design, and field operations
+
+GIS answers a straightforward question: **what exists in the field, and how is it physically connected?** It is the long-lived source of truth for the network model, not the place to run real-time control.
+
+### ADMS: the as-operated operational platform
+
+ADMS should own the operating view of the network:
+
+- Current switching state
+- Topology processing
+- SCADA integration and operator visibility
+- State estimation and distribution power flow
+- Operational applications such as FLISR and VVO
+
+ADMS answers: **what is happening on the grid right now, and how should operators respond?** In most utilities, ADMS is where traditional distribution operations and operator authority live.
+
+### DERMS: the DER coordination and optimization layer
+
+DERMS should own the coordination and optimization of DER behavior across real-time and look-ahead horizons.
+
+That includes functions such as:
+
+- Planning studies for integrating new DERs
+- Real-time monitoring and awareness of DERs
+- Constraint management for voltage, thermal, and reverse power flow issues
+- Optimization and dispatch of DER capabilities over present and future intervals
+
+In practice, DERMS is less about replacing ADMS and more about extending utility operations into a world where generation is distributed, dynamic, and increasingly controllable.
+
+## Why DERMS is data-hungry
+
+DERMS only works well when it has enough system visibility to understand actual network conditions. As with VVO and FLISR, it can be implemented with both SCADA-based and distribution-power-flow-based approaches, but the power-flow-based model is generally more effective because it depends on state estimation and a fuller view of the feeder rather than sparse telemetry alone.
+
+That matters because DERMS is supposed to manage problems such as:
+
+- Under-voltage and over-voltage conditions
+- Thermal overloads on transformers and line sections
+- Reverse power flow
+- DER-induced variability that changes feeder behavior faster than traditional planning assumptions can keep up
+
+If the utility cannot see the state of the network with enough fidelity, DERMS becomes a blunt instrument. It may still provide value, but it will struggle to optimize confidently or intervene precisely.
+
+### Typical DERMS inputs
+
+A serious DERMS deployment usually depends on a wider set of inputs than many teams expect:
+
+- Internal network model
+- SCADA resources, including tap changers, capacitor banks, and DER settings
+- Functional profiles and control policies
+- Types and number of customers or DERs expected to be added
+- Load curves and generation curves
+- Weather data
+- AMI data, including voltage readings, historical data, active power, and reactive power
+- Exclusion lists and operating exceptions
+
+This is also where GIS matters more than many DERMS conversations admit. A DERMS platform may optimize DER behavior, but it still needs a coherent network model, asset context, phase relationships, and a dependable physical topology baseline.
 
 ## Integration flows that make sense
 
-[Describe]
+With those roles in place, the integration pattern becomes much more intuitive.
 
-- GIS → ADMS/DERMS: topology and context.
-- ADMS ↔ DERMS: limits, constraints, control.
-- Feedback into GIS when the physical network changes.
+### GIS to ADMS and DERMS
+
+GIS should publish the authoritative as-built model outward:
+
+- Topology and connectivity
+- Equipment attributes and ratings
+- Spatial context
+- Feeder structure and phase detail
+
+ADMS and DERMS can each consume that model, transform it for their own purposes, and add operational context. But neither should quietly become the long-term owner of the physical network record.
+
+### ADMS and DERMS as an operational loop
+
+The ADMS-DERMS relationship is where high-DER orchestration actually happens.
+
+A practical pattern looks like this:
+
+- ADMS supplies topology, state estimation, operating limits, and system constraints
+- DERMS evaluates DER flexibility against those constraints
+- DERMS computes recommended or automated actions for DERs
+- ADMS and DERMS coordinate around safe execution and operator awareness
+
+This interface is especially important when the utility is trying to manage voltage, thermal constraints, or reverse flow in near real time.
+
+### Feedback to GIS when the physical network changes
+
+Not every change belongs in GIS immediately, but every *physical* network change eventually must.
+
+If new DER interconnections, equipment upgrades, feeder reconfigurations, or permanent asset changes are allowed to live only in ADMS or DERMS, the enterprise model begins to drift. That drift eventually breaks planning studies, interconnection analysis, and trust in every downstream system.
 
 ## What happens when roles blur
 
-[Examples]
+Role ambiguity usually starts as a convenience and ends as a governance problem.
 
-- DERMS maintaining its own network model.
-- ADMS diverging from GIS.
-- Operational and governance consequences.
+### When DERMS builds its own network model
+
+Some DERMS programs end up maintaining a parallel network model because it feels faster than waiting for enterprise model maturity. In the short run, that can accelerate deployment. In the long run, it usually creates duplicate topology logic, conflicting constraint calculations, and a second source of truth that someone eventually has to reconcile.
+
+### When ADMS diverges from GIS
+
+ADMS naturally needs an as-operated view that differs from the as-built model at any given moment. That is normal. The problem starts when temporary operational divergence becomes persistent structural divergence and no one can explain which edits are operational state versus permanent network change.
+
+Once that line blurs, planners, operators, and IT teams start comparing different feeder realities.
+
+### Operational consequences
+
+When roles blur, the symptoms are familiar:
+
+- Conflicting model results across planning and operations
+- Duplicate maintenance effort across GIS, ADMS, and DERMS teams
+- Lower trust in state estimation, power flow, and constraint calculations
+- Slower DER integration because every exception turns into a model reconciliation exercise
+- More governance meetings and more manual workarounds
+
+At low DER penetration, teams can sometimes absorb that friction. At high DER penetration, it becomes a structural operating problem.
 
 ## Designing the governance
 
-[Discuss RACI]
+This is where a formal RACI can help. The point is not bureaucratic overhead; it is to prevent the utility from accidentally funding and governing three competing brains.
+
+A useful governance principle is simple:
+
+- **GIS owns the physical truth**
+- **ADMS owns the operating truth**
+- **DERMS owns DER coordination and optimization truth**
+
+Everything important sits on top of that model.
+
+## RACI grid
+
+Below is a Mermaid-based RACI grid you can embed directly in Hugo. It uses a flowchart as a visual matrix because Mermaid does not provide a native RACI chart type, but this pattern renders well and is easy to maintain in Markdown.
+
 ```mermaid
-graph LR
-  classDef R fill=#2ecc71,stroke=#1e8449,color=#fff;
-  classDef A fill=#3498db,stroke=#21618c,color=#fff;
-  classDef C fill=#f1c40f,stroke=#9a7d0a,color=#000;
-  classDef I fill=#e5e7e9,stroke=#b2babb,color=#000;
+flowchart TB
+  classDef hdr fill:#1f2937,stroke:#111827,color:#ffffff,font-weight:bold;
+  classDef row fill:#f8fafc,stroke:#cbd5e1,color:#111827;
+  classDef A fill:#dbeafe,stroke:#2563eb,color:#111827,font-weight:bold;
+  classDef R fill:#dcfce7,stroke:#16a34a,color:#111827,font-weight:bold;
+  classDef C fill:#fef3c7,stroke:#d97706,color:#111827,font-weight:bold;
+  classDef I fill:#f3f4f6,stroke:#9ca3af,color:#111827,font-weight:bold;
 
-  subgraph Legend
-    lR[R = Responsible]
-    lA[A = Accountable]
-    lC[C = Consulted]
-    lI[I = Informed]
-    class lR R;
-    class lA A;
-    class lC C;
-    class lI I;
+  subgraph raci["RACI for ADMS vs DERMS vs GIS"]
+    direction TB
+
+    h0["Data / Decision Area"]:::hdr
+    h1["GIS"]:::hdr
+    h2["ADMS"]:::hdr
+    h3["DERMS"]:::hdr
+
+    r1["Network topology (as-built)"]:::row
+    r1c1["A"]:::A
+    r1c2["C"]:::C
+    r1c3["C"]:::C
+
+    r2["Network topology (as-operated)"]:::row
+    r2c1["C"]:::C
+    r2c2["A"]:::A
+    r2c3["C"]:::C
+
+    r3["Asset ratings & equipment attributes"]:::row
+    r3c1["A"]:::A
+    r3c2["C"]:::C
+    r3c3["I"]:::I
+
+    r4["DER interconnection / participation data"]:::row
+    r4c1["A"]:::A
+    r4c2["C"]:::C
+    r4c3["R"]:::R
+
+    r5["Real-time grid operations"]:::row
+    r5c1["I"]:::I
+    r5c2["A/R"]:::A
+    r5c3["C"]:::C
+
+    r6["DER optimization strategy & dispatch logic"]:::row
+    r6c1["I"]:::I
+    r6c2["C"]:::C
+    r6c3["A/R"]:::A
+
+    r7["Constraint definitions & operating limits"]:::row
+    r7c1["C"]:::C
+    r7c2["A"]:::A
+    r7c3["R"]:::R
+
+    r8["Model synchronization across platforms"]:::row
+    r8c1["A"]:::A
+    r8c2["R"]:::R
+    r8c3["R"]:::R
+
+    h0 --- h1 --- h2 --- h3
+    h0 --- r1 --- r1c1 --- r1c2 --- r1c3
+    r1 --- r2 --- r2c1 --- r2c2 --- r2c3
+    r2 --- r3 --- r3c1 --- r3c2 --- r3c3
+    r3 --- r4 --- r4c1 --- r4c2 --- r4c3
+    r4 --- r5 --- r5c1 --- r5c2 --- r5c3
+    r5 --- r6 --- r6c1 --- r6c2 --- r6c3
+    r6 --- r7 --- r7c1 --- r7c2 --- r7c3
+    r7 --- r8 --- r8c1 --- r8c2 --- r8c3
   end
-
-  %% Columns
-  gis[GIS]
-  adms[ADMS]
-  derms[DERMS]
-
-  %% Rows as labels (not connected, just anchors)
-  nt_ab[Network topology (as-built)]
-  nt_ao[Network topology (as-operated)]
-  ar[Asset ratings]
-  der_ic[DER interconnection data]
-  rt_ops[Real-time grid operations]
-  der_opt[DER optimization strategy]
-  constraints[Constraint definitions]
-  sync[Model synchronization]
-
-  %% Row: Network topology (as-built)
-  nt_ab --- nt_ab_gis((A))
-  nt_ab --- nt_ab_adms((C))
-  nt_ab --- nt_ab_derms((C))
-  class nt_ab_gis A;
-  class nt_ab_adms C;
-  class nt_ab_derms C;
-
-  %% Row: Network topology (as-operated)
-  nt_ao --- nt_ao_gis((C))
-  nt_ao --- nt_ao_adms((A))
-  nt_ao --- nt_ao_derms((C))
-  class nt_ao_gis C;
-  class nt_ao_adms A;
-  class nt_ao_derms C;
-
-  %% Row: Asset ratings
-  ar --- ar_gis((A))
-  ar --- ar_adms((C))
-  ar --- ar_derms((I))
-  class ar_gis A;
-  class ar_adms C;
-  class ar_derms I;
-
-  %% Row: DER interconnection data
-  der_ic --- der_ic_gis((A))
-  der_ic --- der_ic_adms((C))
-  der_ic --- der_ic_derms((R))
-  class der_ic_gis A;
-  class der_ic_adms C;
-  class der_ic_derms R;
-
-  %% Row: Real-time grid operations
-  rt_ops --- rt_ops_gis((I))
-  rt_ops --- rt_ops_adms((A))
-  rt_ops --- rt_ops_derms((C))
-  class rt_ops_gis I;
-  class rt_ops_adms A;
-  class rt_ops_derms C;
-
-  %% Row: DER optimization strategy
-  der_opt --- der_opt_gis((I))
-  der_opt --- der_opt_adms((C))
-  der_opt --- der_opt_derms((A))
-  class der_opt_gis I;
-  class der_opt_adms C;
-  class der_opt_derms A;
-
-  %% Row: Constraint definitions
-  constraints --- constraints_gis((C))
-  constraints --- constraints_adms((A))
-  constraints --- constraints_derms((A))
-  class constraints_gis C;
-  class constraints_adms A;
-  class constraints_derms A;
-
-  %% Row: Model synchronization
-  sync --- sync_gis((A))
-  sync --- sync_adms((R))
-  sync --- sync_derms((R))
-  class sync_gis A;
-  class sync_adms R;
-  class sync_derms R;
 ```
-  
-- Who owns what data.
-- How changes are coordinated across the three.
+
+Read the grid this way:
+
+- **A = Accountable** for the authoritative decision or record
+- **R = Responsible** for execution
+- **C = Consulted** as an active participant in the decision or process
+- **I = Informed** but not driving the work
+
+The most important architectural signal in the matrix is that GIS remains accountable for the as-built network model, ADMS remains accountable for operational state and grid operations, and DERMS becomes responsible and accountable for DER-specific optimization and dispatch.
+
+## How to use the RACI in practice
+
+The matrix is only useful if it changes how work is governed.
+
+A practical operating model usually includes:
+
+- A controlled process for publishing network model changes from GIS into ADMS and DERMS
+- A clear rule for what constitutes temporary operational state versus permanent physical change
+- Named owners for DER participation data, control policies, and exclusion lists
+- Formal review points when new DER programs or feeder constraints affect more than one platform
+
+In other words, the architecture and the governance model should be designed together.
 
 ## Executive takeaways
 
-[Bullets on clarifying responsibilities and avoiding “three brains.”]
+High-DER utilities do not need three competing brains. They need a clean division of labor.
 
+- GIS should remain the system of record for the physical network
+- ADMS should remain the system of operation for the live grid
+- DERMS should manage DER awareness, constraint response, and optimization
+- Data should move deliberately between the three, not accumulate in parallel models
+- Governance should define ownership before integration complexity forces the issue
 
-this is what i know about derms and data requirements; some from gis DERMS represents a module of ADMS that consists of a set of functionalities, ranging from planning
-studies for integration of new DERs, through real-time monitoring and awareness of DERs, to the
-constraint management and optimization of systems with high DER penetration in both real-time and
-look-ahead (future) periods. 
-As VVO and FLISR, DERMS also has Distribution Power Flow-based and SCADA-based approaches. The
-Distribution Power Flow-based approach is more accurate and beneficial for Alliant since the
-functionality relies on the State Estimation results, not only SCADA readings. As DERMS is aimed at
-resolving DER-imposed issues such as under-/over-voltages, overloads on transformers/sections,
-reverse power flows, etc., it is extremely important to have complete insight into the network state
-to provide the full benefits of DERMS. 
-Inputs: 
- Internal Model. 
- SCADA Resources: tap changers, capacitor banks, DERS settings. 
- Function Profile. 
- Types and number of customers/DERS to be added. 
- Load/Generation curves. 
- Weather data. 
- AMI data: voltage readings, voltage poll, Historical data from AMI, AMI Active Power,
-Reactive Power. 
- Exclusion list.
+If a utility gets these boundaries right early, DERMS becomes much easier to scale. If it gets them wrong, the organization spends years untangling model drift, duplicate logic, and control ambiguity.
