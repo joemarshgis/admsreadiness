@@ -3,6 +3,10 @@ title: "ADMS vs DERMS vs GIS: Who Owns What in a High-DER Grid?"
 date: 2026-05-26T10:00:00-04:00
 draft: false
 tags: ["ADMS", "DERMS", "GIS", "DER"]
+cover:
+  image: "/images/ridge.jpg"
+  alt: "Willow Ridge"
+  caption: "GIS matters more than many DERMS conversations admit. A DERMS platform may optimize DER behavior, but it still needs a coherent network model, asset context, phase relationships, and a dependable physical topology baseline."
 ---
 
 # ADMS vs DERMS vs GIS: Who Owns What in a High-DER Grid?
@@ -14,6 +18,8 @@ In a high-DER grid, ADMS, DERMS, and GIS are all sometimes marketed as the syste
 The more useful question is not which platform is *the* brain, but which system owns which data, which operational decisions, and which model of the network. Once that boundary is clear, the architecture gets simpler, the integrations get cleaner, and governance becomes much easier to sustain.
 
 ## Clear roles in a high-DER architecture
+
+![GIS ADMS DERMS Infographic](/images/gis-adms-derms.png)
 
 A clean high-DER architecture starts by separating the **as-built**, **as-operated**, and **DER-optimized** views of the grid.
 
@@ -87,6 +93,8 @@ With those roles in place, the integration pattern becomes much more intuitive.
 
 ### GIS to ADMS and DERMS
 
+![GIS ADMS DERMS Diagram](/images/gis-adms-derms-simple.png)
+
 GIS should publish the authoritative as-built model outward:
 
 - Topology and connectivity
@@ -154,8 +162,6 @@ A useful governance principle is simple:
 Everything important sits on top of that model.
 
 ## RACI grid
-
-Below is a Mermaid-based RACI grid you can embed directly in Hugo. It uses a flowchart as a visual matrix because Mermaid does not provide a native RACI chart type, but this pattern renders well and is easy to maintain in Markdown.
 
 ```mermaid
 flowchart TB
