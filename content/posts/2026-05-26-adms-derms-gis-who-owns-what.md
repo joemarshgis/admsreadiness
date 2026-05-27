@@ -159,71 +159,58 @@ Below is a Mermaid-based RACI grid you can embed directly in Hugo. It uses a flo
 
 ```mermaid
 flowchart TB
-  classDef hdr fill:#1f2937,stroke:#111827,color:#ffffff,font-weight:bold;
-  classDef row fill:#f8fafc,stroke:#cbd5e1,color:#111827;
-  classDef A fill:#dbeafe,stroke:#2563eb,color:#111827,font-weight:bold;
-  classDef R fill:#dcfce7,stroke:#16a34a,color:#111827,font-weight:bold;
-  classDef C fill:#fef3c7,stroke:#d97706,color:#111827,font-weight:bold;
-  classDef I fill:#f3f4f6,stroke:#9ca3af,color:#111827,font-weight:bold;
+  classDef gis fill:#d9ead3,stroke:#6aa84f,color:#111,stroke-width:1.5px;
+  classDef adms fill:#cfe2f3,stroke:#3d85c6,color:#111,stroke-width:1.5px;
+  classDef derms fill:#fce5cd,stroke:#e69138,color:#111,stroke-width:1.5px;
+  classDef shared fill:#f3f3f3,stroke:#999,color:#111,stroke-dasharray: 4 3;
 
-  subgraph raci["RACI for ADMS vs DERMS vs GIS"]
-    direction TB
-
-    h0["Data / Decision Area"]:::hdr
-    h1["GIS"]:::hdr
-    h2["ADMS"]:::hdr
-    h3["DERMS"]:::hdr
-
-    r1["Network topology (as-built)"]:::row
-    r1c1["A"]:::A
-    r1c2["C"]:::C
-    r1c3["C"]:::C
-
-    r2["Network topology (as-operated)"]:::row
-    r2c1["C"]:::C
-    r2c2["A"]:::A
-    r2c3["C"]:::C
-
-    r3["Asset ratings & equipment attributes"]:::row
-    r3c1["A"]:::A
-    r3c2["C"]:::C
-    r3c3["I"]:::I
-
-    r4["DER interconnection / participation data"]:::row
-    r4c1["A"]:::A
-    r4c2["C"]:::C
-    r4c3["R"]:::R
-
-    r5["Real-time grid operations"]:::row
-    r5c1["I"]:::I
-    r5c2["A/R"]:::A
-    r5c3["C"]:::C
-
-    r6["DER optimization strategy & dispatch logic"]:::row
-    r6c1["I"]:::I
-    r6c2["C"]:::C
-    r6c3["A/R"]:::A
-
-    r7["Constraint definitions & operating limits"]:::row
-    r7c1["C"]:::C
-    r7c2["A"]:::A
-    r7c3["R"]:::R
-
-    r8["Model synchronization across platforms"]:::row
-    r8c1["A"]:::A
-    r8c2["R"]:::R
-    r8c3["R"]:::R
-
-    h0 --- h1 --- h2 --- h3
-    h0 --- r1 --- r1c1 --- r1c2 --- r1c3
-    r1 --- r2 --- r2c1 --- r2c2 --- r2c3
-    r2 --- r3 --- r3c1 --- r3c2 --- r3c3
-    r3 --- r4 --- r4c1 --- r4c2 --- r4c3
-    r4 --- r5 --- r5c1 --- r5c2 --- r5c3
-    r5 --- r6 --- r6c1 --- r6c2 --- r6c3
-    r6 --- r7 --- r7c1 --- r7c2 --- r7c3
-    r7 --- r8 --- r8c1 --- r8c2 --- r8c3
+  subgraph GIS["GIS"]
+    G1["Accountable: as-built network topology"]
+    G2["Accountable: asset attributes & ratings"]
+    G3["Consulted: operating constraints"]
   end
+
+  subgraph ADMS["ADMS"]
+    A1["Accountable: as-operated network state"]
+    A2["Responsible: real-time operations"]
+    A3["Accountable: switching & operational limits"]
+  end
+
+  subgraph DERMS["DERMS"]
+    D1["Responsible: DER coordination"]
+    D2["Accountable: DER optimization logic"]
+    D3["Responsible: DER dispatch / setpoints"]
+  end
+
+  subgraph Shared["Shared governance"]
+    S1["Model synchronization"]
+    S2["DER interconnection updates"]
+    S3["Constraint definitions"]
+  end
+
+  class G1,G2,G3 gis;
+  class A1,A2,A3 adms;
+  class D1,D2,D3 derms;
+  class S1,S2,S3 shared;
+
+  G1 --> A1
+  G2 --> A3
+  G1 --> D1
+
+  A3 <--> D2
+  A2 <--> D3
+
+  G3 --> S3
+  A3 --> S3
+  D2 --> S3
+
+  G1 --> S1
+  A1 --> S1
+  D1 --> S1
+
+  G1 --> S2
+  D1 --> S2
+  A1 --> S2
 ```
 
 Read the grid this way:
