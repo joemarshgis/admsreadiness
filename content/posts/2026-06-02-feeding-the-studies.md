@@ -75,7 +75,6 @@ On their own, these are disparate datasets that live in different systems and te
 
 That matters because leaders rarely need another isolated dataset. They need one view that explains where the grid is under stress, where conditions are changing, and where investment will have the greatest effect.
 
-[image:76]
 
 ## Putting study results back into GIS
 
@@ -97,7 +96,7 @@ Instead of looking at one study or one event in isolation, utilities can layer y
 
 That kind of analysis is especially valuable for capital planning, DER strategy, and wildfire mitigation because it helps answer a more strategic question: not just where the grid has a problem today, but where pressure is building fastest.
 
-![Wildfire](/images/wildfire.jpg "The Pioneer Fire located in the Boise National Forest")
+![Wildfire](/images/wildfire.jpg ("The Pioneer Fire located in the Boise National Forest")
 
 ## Pitfalls
 
