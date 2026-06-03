@@ -26,7 +26,7 @@ Every major grid decision now starts with a study: can the system handle new loa
 
 In many utilities, that model is still built by hand in engineering tools from one-off GIS exports. The process is fragile, slow, and dependent on a few people who know how to clean things up each time. Engineers learn to distrust GIS data, and they spend their time repairing the model instead of answering the business question.
 
-> “Systems are now more capable than people, and the ordinary incremental growth rate in skills within an organization does not keep up with developments in technology.” — Roger Tomlinson, *Thinking About GIS: Geographic Information System Planning for Managers*[cite:54]
+> “Systems are now more capable than people, and the ordinary incremental growth rate in skills within an organization does not keep up with developments in technology.” — Roger Tomlinson, *Thinking About GIS: Geographic Information System Planning for Managers*
 
 That observation still holds. In many organizations, the gap is not the software. The gap is that departments, standards, and workflows have not matured at the same pace as the tools. The result is duplicated effort, rework, and a planning process that depends too heavily on translation between siloed teams.
 
@@ -69,9 +69,9 @@ flowchart LR
 
 ## Turning disparate datasets into one picture
 
-Every major planning question now depends on more than the network model alone. Utilities are trying to combine asset records, outage history, AMI and SCADA feeds, vegetation and wildfire risk, DER applications, customer growth, and land-use change into one decision process.[cite:33]
+Every major planning question now depends on more than the network model alone. Utilities are trying to combine asset records, outage history, AMI and SCADA feeds, vegetation and wildfire risk, DER applications, customer growth, and land-use change into one decision process.
 
-On their own, these are disparate datasets that live in different systems and tell only part of the story. GIS is where they can be brought together, because location provides the common frame that lets the organization compare engineering results, operating history, environmental exposure, and future growth in one place.[cite:33]
+On their own, these are disparate datasets that live in different systems and tell only part of the story. GIS is where they can be brought together, because location provides the common frame that lets the organization compare engineering results, operating history, environmental exposure, and future growth in one place.
 
 That matters because leaders rarely need another isolated dataset. They need one view that explains where the grid is under stress, where conditions are changing, and where investment will have the greatest effect.
 
@@ -90,13 +90,13 @@ The key is not to write every engineering output back into GIS. The goal is to r
 
 ## Using GIS analytics to see emerging hot spots
 
-This is where GIS becomes more than a repository. Modern GIS platforms have strong spatial and spatiotemporal analysis tools that can reveal where problems are clustering and where risk is growing over time.[cite:45]
+This is where GIS becomes more than a repository. Modern GIS platforms have strong spatial and spatiotemporal analysis tools that can reveal where problems are clustering and where risk is growing over time.
 
 Instead of looking at one study or one event in isolation, utilities can layer years of study outputs, outages, DER requests, load growth, inspections, and wildfire conditions to identify emerging hot spots. Those hot spots are often the places where multiple issues are converging: rising demand, repeated constraints, worsening reliability, and increasing environmental exposure.
 
 That kind of analysis is especially valuable for capital planning, DER strategy, and wildfire mitigation because it helps answer a more strategic question: not just where the grid has a problem today, but where pressure is building fastest.
 
-![Wildfire](/images/wildfire.jpg ("The Pioneer Fire located in the Boise National Forest")
+![Wildfire](/images/wildfire.jpg "The Pioneer Fire located in the Boise National Forest")
 
 ## Pitfalls
 
