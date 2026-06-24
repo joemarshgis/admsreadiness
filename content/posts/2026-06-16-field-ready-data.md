@@ -98,7 +98,7 @@ Some of that information is sensitive and should be governed carefully. But pret
 
 ### Field to GIS, EAM, and OMS
 
-![Paper backlog](/images/adms-readiness/paper-backlog.jpg)
+![Paper backlog](/images/paper-backlog.jpg)
 
 The loop back matters just as much.
 
