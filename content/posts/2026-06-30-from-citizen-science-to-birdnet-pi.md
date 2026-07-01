@@ -4,7 +4,7 @@ date: 2026-06-30T10:00:00-04:00
 draft: false
 tags: ["BirdNET-Pi", "BirdWeather", "Citizen Science", "GIS", "Raspberry Pi"]
 cover:
-  image: "/images/birdnetpi-cover.jpg"
+  image: "/images/redbreasted-nuthatch.jpg"
   alt: "Microphone and Raspberry Pi bird listening station in a backyard setting."
   caption: "A small field device, a stream of observations, and a larger system to make sense of them."
   relative: false
