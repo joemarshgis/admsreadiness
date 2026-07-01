@@ -40,6 +40,8 @@ outputs:
 
 params:
   env: production
+  defaultTheme: auto
+  disableThemeToggle: false
   description: "Thoughts on GIS, utility architecture, ADMS, OMS, and operational data readiness."
   author: "Joe Marsh"
   keywords:
