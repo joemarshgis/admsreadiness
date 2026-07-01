@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile on ADMS Readiness</title>
+    <link>http://localhost:1313/tags/mobile/</link>
+    <description>Recent content in Mobile on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Jun 2026 10:00:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Field-Ready Data: Closing the Loop Between GIS and Mobile / Work Management</title>
+      <link>http://localhost:1313/posts/2026-06-16-field-ready-data/</link>
+      <pubDate>Tue, 23 Jun 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-06-16-field-ready-data/</guid>
+      <description>&lt;h1 id=&#34;field-ready-data-closing-the-loop-between-gis-and-mobile--work-management&#34;&gt;Field-Ready Data: Closing the Loop Between GIS and Mobile / Work Management&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-crews-dont-trust-the-map&#34;&gt;Why crews don’t trust the map&lt;/h2&gt;&#xA;&lt;p&gt;On my first day as a lineman apprentice in a union shop, a seasoned journeyman took me to the hood of his truck and pulled out his circuit map.&lt;/p&gt;&#xA;&lt;p&gt;It was covered in coffee stains, highlighter, and red scribbles. He handed me a freshly printed map and told me to copy everything over.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

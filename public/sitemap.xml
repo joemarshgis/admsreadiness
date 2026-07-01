@@ -2,28 +2,121 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/adms/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2026-05-05-from-tickets-to-topology/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/birdnetpi/</loc>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/birdweather/</loc>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/citizen-science/</loc>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-06-30-from-citizen-science-to-birdnet-pi/</loc>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/gis/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/integration/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/oms/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/raspberry-pi/</loc>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-06-30T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/field/</loc>
+    <lastmod>2026-06-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-06-16-field-ready-data/</loc>
+    <lastmod>2026-06-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mobile/</loc>
+    <lastmod>2026-06-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/work-management/</loc>
+    <lastmod>2026-06-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/asset-management/</loc>
+    <lastmod>2026-06-09T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/eam/</loc>
+    <lastmod>2026-06-09T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-06-09-gis-plus-eam/</loc>
+    <lastmod>2026-06-09T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/integration/</loc>
+    <lastmod>2026-06-09T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/engineering/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/export-subnetwork/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-06-02-feeding-the-studies/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/gis/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/planning/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tracing/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/utilities/</loc>
+    <lastmod>2026-06-02T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/adms/</loc>
+    <lastmod>2026-05-26T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-05-26-adms-derms-gis-who-owns-what/</loc>
+    <lastmod>2026-05-26T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/der/</loc>
+    <lastmod>2026-05-26T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/derms/</loc>
+    <lastmod>2026-05-26T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/arcgis-pro/</loc>
+    <lastmod>2026-05-23T20:18:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/arcgis-utility-network/</loc>
+    <lastmod>2026-05-23T20:18:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/oms/</loc>
+    <lastmod>2026-05-23T20:18:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-05-23-tracing-once-using-everywhere/</loc>
+    <lastmod>2026-05-23T20:18:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/operations/</loc>
+    <lastmod>2026-05-19T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/scada/</loc>
+    <lastmod>2026-05-19T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-05-19-scada-meets-the-map/</loc>
+    <lastmod>2026-05-19T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-05-12-adms-readiness-for-real/</loc>
+    <lastmod>2026-05-12T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/readiness/</loc>
+    <lastmod>2026-05-12T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-05-05-from-tickets-to-topology/</loc>
     <lastmod>2026-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
@@ -32,23 +125,11 @@
     <loc>http://localhost:1313/categories/architecture/</loc>
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/data-readiness/</loc>
-    <lastmod>2026-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/2026-01-gis-system-of-record/</loc>
-    <lastmod>2026-04-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/2026-01-gis-in-the-center-architecture/</loc>
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/utilities/</loc>
     <lastmod>2026-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/derms/</loc>
-    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/foundations/</loc>
     <lastmod>2026-04-20T00:00:00+00:00</lastmod>
@@ -58,9 +139,5 @@
   </url><url>
     <loc>http://localhost:1313/posts/grid-operations-glossary/</loc>
     <lastmod>2026-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/2026-05-12-adms-readiness-for-real1/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/readme/</loc>
   </url>
 </urlset>

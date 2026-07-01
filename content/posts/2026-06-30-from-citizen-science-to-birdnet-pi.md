@@ -42,4 +42,4 @@ Citizen science turned into GIS. GIS turned into electric utilities. Electric ut
 
 That arc is part of why this project feels meaningful. BirdNET-Pi and BirdWeather are not separate from the rest of my interests; they are another expression of the same idea that first caught my attention years ago: that good data, collected in the field and connected to a larger system, can help people understand the world more clearly.
 
-Check out my bird dashboard here: birds.admsreadiness.com
+Check out my bird dashboard here: [birds.admsreadiness.com](https://birds.admsreadiness.com)

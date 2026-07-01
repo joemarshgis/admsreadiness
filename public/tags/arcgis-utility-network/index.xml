@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arcgis Utility Network on ADMS Readiness</title>
+    <link>http://localhost:1313/tags/arcgis-utility-network/</link>
+    <description>Recent content in Arcgis Utility Network on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 May 2026 20:18:00 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/arcgis-utility-network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tracing Once, Using Everywhere: Propagated Values for OMS and ADMS</title>
+      <link>http://localhost:1313/posts/2026-05-23-tracing-once-using-everywhere/</link>
+      <pubDate>Sat, 23 May 2026 20:18:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2026-05-23-tracing-once-using-everywhere/</guid>
+      <description>&lt;h1 id=&#34;tracing-once-using-everywhere-propagated-values-for-oms-and-adms&#34;&gt;Tracing Once, Using Everywhere: Propagated Values for OMS and ADMS&lt;/h1&gt;&#xA;&lt;p&gt;ArcGIS Utility Network tracing already gives us the path through the network, but OMS and ADMS usually need more than a list of traversed features. Export Subnetwork can produce JSON that external systems consume, and propagation lets that export carry network‑derived answers instead of forcing those systems to recalculate everything downstream.&lt;/p&gt;&#xA;&lt;p&gt;ArcGIS Pro 3.7 and the 2026 Network Management Release finally closed a gap I’ve seen in a lot of OMS/ADMS projects. For years I’ve watched teams bolt on custom extractors, ETL, and middleware just to answer questions the Utility Network is already capable of answering:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

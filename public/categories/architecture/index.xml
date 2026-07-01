@@ -9,13 +9,6 @@
     <lastBuildDate>Sat, 25 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GIS as the System of Record for ADMS and OMS</title>
-      <link>http://localhost:1313/posts/2026-01-gis-system-of-record/</link>
-      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026-01-gis-system-of-record/</guid>
-      <description>&lt;h1 id=&#34;gis-as-the-system-of-record-for-adms-and-oms&#34;&gt;GIS as the System of Record for ADMS and OMS&lt;/h1&gt;&#xA;&lt;p&gt;Utilities rarely fail ADMS or OMS projects because of software.&#xA;They fail because foundational GIS data isn’t ready.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-gis-is-central&#34;&gt;Why GIS Is Central&lt;/h2&gt;&#xA;&lt;p&gt;GIS defines:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Network connectivity&lt;/li&gt;&#xA;&lt;li&gt;Phase modeling&lt;/li&gt;&#xA;&lt;li&gt;Operating voltage&lt;/li&gt;&#xA;&lt;li&gt;Asset relationships&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Every downstream system depends on this accuracy.&lt;/p&gt;&#xA;&lt;h2 id=&#34;common-data-gaps&#34;&gt;Common Data Gaps&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Self-intersecting lines&lt;/li&gt;&#xA;&lt;li&gt;Missing or invalid phase designation&lt;/li&gt;&#xA;&lt;li&gt;Null facility IDs&lt;/li&gt;&#xA;&lt;li&gt;Inconsistent feeder modeling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-actually-works&#34;&gt;What Actually Works&lt;/h2&gt;&#xA;&lt;p&gt;A targeted GIS data readiness assessment&#xA;&lt;em&gt;before&lt;/em&gt; OMS or ADMS implementation or upgrades.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>GIS in the Center: The Architecture Utilities Actually Operate On</title>
       <link>http://localhost:1313/posts/2026-01-gis-in-the-center-architecture/</link>
       <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>

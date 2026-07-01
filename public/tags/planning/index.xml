@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Planning on ADMS Readiness</title>
+    <link>http://localhost:1313/tags/planning/</link>
+    <description>Recent content in Planning on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jun 2026 10:00:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/planning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feeding the Studies: Integrating GIS with Engineering Analysis and Planning Tools</title>
+      <link>http://localhost:1313/posts/2026-06-02-feeding-the-studies/</link>
+      <pubDate>Tue, 02 Jun 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-06-02-feeding-the-studies/</guid>
+      <description>&lt;h2 id=&#34;studies-are-only-as-good-as-the-model-they-receive&#34;&gt;Studies are only as good as the model they receive&lt;/h2&gt;&#xA;&lt;p&gt;Every major grid decision now starts with a study: can the system handle new load, more DER, wildfire risk, or a major capital project? Those studies are only as good as the network model they are fed.&lt;/p&gt;&#xA;&lt;p&gt;In many utilities, that model is still built by hand in engineering tools from one-off GIS exports. The process is fragile, slow, and dependent on a few people who know how to clean things up each time. Engineers learn to distrust GIS data, and they spend their time repairing the model instead of answering the business question.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

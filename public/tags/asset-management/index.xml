@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asset Management on ADMS Readiness</title>
+    <link>http://localhost:1313/tags/asset-management/</link>
+    <description>Recent content in Asset Management on ADMS Readiness</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Jun 2026 10:00:00 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/asset-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIS &#43; EAM: Turning As-Built Edits into Asset Strategy</title>
+      <link>http://localhost:1313/posts/2026-06-09-gis-plus-eam/</link>
+      <pubDate>Tue, 09 Jun 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-06-09-gis-plus-eam/</guid>
+      <description>&lt;h1 id=&#34;gis--eam-turning-as-built-edits-into-asset-strategy&#34;&gt;GIS + EAM: Turning As-Built Edits into Asset Strategy&lt;/h1&gt;&#xA;&lt;h2 id=&#34;the-giseam-integration-gap&#34;&gt;The GIS–EAM integration gap&lt;/h2&gt;&#xA;&lt;p&gt;Many utilities have both GIS and EAM, but they still behave like neighboring countries: one for maps, one for work.&lt;/p&gt;&#xA;&lt;p&gt;GIS usually knows where the asset is, how it is connected, and what the network looks like. EAM usually knows what the asset is in lifecycle terms, what work has been done to it, and what is supposed to happen next. On paper, that is complementary. In practice, the two systems are often tied together by partial syncs, manual re-entry, and workflows that depend more on tribal knowledge than design.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

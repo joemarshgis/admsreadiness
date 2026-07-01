@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DERMS on ADMS Readiness</title>
-    <link>http://localhost:1313/tags/derms/</link>
-    <description>Recent content in DERMS on ADMS Readiness</description>
+    <title>DER on ADMS Readiness</title>
+    <link>http://localhost:1313/tags/der/</link>
+    <description>Recent content in DER on ADMS Readiness</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 26 May 2026 10:00:00 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/derms/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/der/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ADMS vs DERMS vs GIS: Who Owns What in a High-DER Grid?</title>
       <link>http://localhost:1313/posts/2026-05-26-adms-derms-gis-who-owns-what/</link>
       <pubDate>Tue, 26 May 2026 10:00:00 -0400</pubDate>
       <guid>http://localhost:1313/posts/2026-05-26-adms-derms-gis-who-owns-what/</guid>
       <description>&lt;h1 id=&#34;adms-vs-derms-vs-gis-who-owns-what-in-a-high-der-grid&#34;&gt;ADMS vs DERMS vs GIS: Who Owns What in a High-DER Grid?&lt;/h1&gt;&#xA;&lt;h2 id=&#34;the-alphabet-soup-problem&#34;&gt;The alphabet soup problem&lt;/h2&gt;&#xA;&lt;p&gt;In a high-DER grid, ADMS, DERMS, and GIS are all sometimes marketed as the system that will finally make the distribution network “smart.” That framing creates confusion, because these platforms are not interchangeable brains so much as distinct systems with different responsibilities, different time horizons, and different sources of truth.&lt;/p&gt;&#xA;&lt;p&gt;The more useful question is not which platform is &lt;em&gt;the&lt;/em&gt; brain, but which system owns which data, which operational decisions, and which model of the network. Once that boundary is clear, the architecture gets simpler, the integrations get cleaner, and governance becomes much easier to sustain.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Grid Operations Glossary: GIS, OMS, ADMS, DERMS, and Friends</title>
-      <link>http://localhost:1313/posts/grid-operations-glossary/</link>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/grid-operations-glossary/</guid>
-      <description>&lt;p&gt;Before we talk about &lt;strong&gt;GIS in the center&lt;/strong&gt; of utility architecture, it helps to make sure we’re speaking the same language.&lt;/p&gt;&#xA;&lt;p&gt;Most ADMS and grid modernization conversations are full of acronyms—GIS, OMS, ADMS, SCADA, DERMS, MDMS, EAM—that mean one thing to the vendor slideware, and something slightly different to the people who actually operate the grid.&lt;/p&gt;&#xA;&lt;p&gt;This post is a working glossary for the terms I use across ADMS Readiness. It’s written for executives, program leaders, and adjacent teams who need to understand the concepts without living in them all day.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

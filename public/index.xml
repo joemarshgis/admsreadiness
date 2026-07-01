@@ -6,8 +6,64 @@
     <description>Recent content on ADMS Readiness</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 10:00:00 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Citizen Science to BirdNET-Pi</title>
+      <link>http://localhost:1313/posts/2026-06-30-from-citizen-science-to-birdnet-pi/</link>
+      <pubDate>Tue, 30 Jun 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-06-30-from-citizen-science-to-birdnet-pi/</guid>
+      <description>&lt;p&gt;This project feels like a small personal loop closing: from early exposure to citizen science, to GIS and utility systems, and back to a quiet device listening to the world outside.&lt;/p&gt;&#xA;&lt;p&gt;I first learned about Cornell’s ornithology program back in high school while working on a report about the power of new smartphones and citizen science data collection. What stayed with me was the idea that ordinary people could contribute meaningful observations to a growing scientific database just by paying attention, recording what they saw, and sharing it. That early exposure to citizen science left a lasting impression on me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Field-Ready Data: Closing the Loop Between GIS and Mobile / Work Management</title>
+      <link>http://localhost:1313/posts/2026-06-16-field-ready-data/</link>
+      <pubDate>Tue, 23 Jun 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-06-16-field-ready-data/</guid>
+      <description>&lt;h1 id=&#34;field-ready-data-closing-the-loop-between-gis-and-mobile--work-management&#34;&gt;Field-Ready Data: Closing the Loop Between GIS and Mobile / Work Management&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-crews-dont-trust-the-map&#34;&gt;Why crews don’t trust the map&lt;/h2&gt;&#xA;&lt;p&gt;On my first day as a lineman apprentice in a union shop, a seasoned journeyman took me to the hood of his truck and pulled out his circuit map.&lt;/p&gt;&#xA;&lt;p&gt;It was covered in coffee stains, highlighter, and red scribbles. He handed me a freshly printed map and told me to copy everything over.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GIS &#43; EAM: Turning As-Built Edits into Asset Strategy</title>
+      <link>http://localhost:1313/posts/2026-06-09-gis-plus-eam/</link>
+      <pubDate>Tue, 09 Jun 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-06-09-gis-plus-eam/</guid>
+      <description>&lt;h1 id=&#34;gis--eam-turning-as-built-edits-into-asset-strategy&#34;&gt;GIS + EAM: Turning As-Built Edits into Asset Strategy&lt;/h1&gt;&#xA;&lt;h2 id=&#34;the-giseam-integration-gap&#34;&gt;The GIS–EAM integration gap&lt;/h2&gt;&#xA;&lt;p&gt;Many utilities have both GIS and EAM, but they still behave like neighboring countries: one for maps, one for work.&lt;/p&gt;&#xA;&lt;p&gt;GIS usually knows where the asset is, how it is connected, and what the network looks like. EAM usually knows what the asset is in lifecycle terms, what work has been done to it, and what is supposed to happen next. On paper, that is complementary. In practice, the two systems are often tied together by partial syncs, manual re-entry, and workflows that depend more on tribal knowledge than design.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Feeding the Studies: Integrating GIS with Engineering Analysis and Planning Tools</title>
+      <link>http://localhost:1313/posts/2026-06-02-feeding-the-studies/</link>
+      <pubDate>Tue, 02 Jun 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-06-02-feeding-the-studies/</guid>
+      <description>&lt;h2 id=&#34;studies-are-only-as-good-as-the-model-they-receive&#34;&gt;Studies are only as good as the model they receive&lt;/h2&gt;&#xA;&lt;p&gt;Every major grid decision now starts with a study: can the system handle new load, more DER, wildfire risk, or a major capital project? Those studies are only as good as the network model they are fed.&lt;/p&gt;&#xA;&lt;p&gt;In many utilities, that model is still built by hand in engineering tools from one-off GIS exports. The process is fragile, slow, and dependent on a few people who know how to clean things up each time. Engineers learn to distrust GIS data, and they spend their time repairing the model instead of answering the business question.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ADMS vs DERMS vs GIS: Who Owns What in a High-DER Grid?</title>
+      <link>http://localhost:1313/posts/2026-05-26-adms-derms-gis-who-owns-what/</link>
+      <pubDate>Tue, 26 May 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-05-26-adms-derms-gis-who-owns-what/</guid>
+      <description>&lt;h1 id=&#34;adms-vs-derms-vs-gis-who-owns-what-in-a-high-der-grid&#34;&gt;ADMS vs DERMS vs GIS: Who Owns What in a High-DER Grid?&lt;/h1&gt;&#xA;&lt;h2 id=&#34;the-alphabet-soup-problem&#34;&gt;The alphabet soup problem&lt;/h2&gt;&#xA;&lt;p&gt;In a high-DER grid, ADMS, DERMS, and GIS are all sometimes marketed as the system that will finally make the distribution network “smart.” That framing creates confusion, because these platforms are not interchangeable brains so much as distinct systems with different responsibilities, different time horizons, and different sources of truth.&lt;/p&gt;&#xA;&lt;p&gt;The more useful question is not which platform is &lt;em&gt;the&lt;/em&gt; brain, but which system owns which data, which operational decisions, and which model of the network. Once that boundary is clear, the architecture gets simpler, the integrations get cleaner, and governance becomes much easier to sustain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tracing Once, Using Everywhere: Propagated Values for OMS and ADMS</title>
+      <link>http://localhost:1313/posts/2026-05-23-tracing-once-using-everywhere/</link>
+      <pubDate>Sat, 23 May 2026 20:18:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2026-05-23-tracing-once-using-everywhere/</guid>
+      <description>&lt;h1 id=&#34;tracing-once-using-everywhere-propagated-values-for-oms-and-adms&#34;&gt;Tracing Once, Using Everywhere: Propagated Values for OMS and ADMS&lt;/h1&gt;&#xA;&lt;p&gt;ArcGIS Utility Network tracing already gives us the path through the network, but OMS and ADMS usually need more than a list of traversed features. Export Subnetwork can produce JSON that external systems consume, and propagation lets that export carry network‑derived answers instead of forcing those systems to recalculate everything downstream.&lt;/p&gt;&#xA;&lt;p&gt;ArcGIS Pro 3.7 and the 2026 Network Management Release finally closed a gap I’ve seen in a lot of OMS/ADMS projects. For years I’ve watched teams bolt on custom extractors, ETL, and middleware just to answer questions the Utility Network is already capable of answering:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SCADA Meets the Map: Making GIS–SCADA Integration Useful in the Control Room</title>
+      <link>http://localhost:1313/posts/2026-05-19-scada-meets-the-map/</link>
+      <pubDate>Tue, 19 May 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-05-19-scada-meets-the-map/</guid>
+      <description>&lt;h2 id=&#34;why-operators-care-about-maps&#34;&gt;Why operators care about maps&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/scada-gis/mountain.jpg&#34; alt=&#34;Mountain landscape&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Most control rooms still live in SCADA point lists and one‑line diagrams. That works well when you know every device on your system by heart, but it&amp;rsquo;s not great for spatial questions like &amp;ldquo;what exactly is under this storm cell?&amp;rdquo; or &amp;ldquo;where are all the open points on this feeder?&amp;rdquo; A screen full of alarms and tag names doesn&amp;rsquo;t naturally show distance, access, or customer impact.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ADMS Readiness, For Real: What the GIS→ADMS Integration Needs to Prove Before Go-Live</title>
+      <link>http://localhost:1313/posts/2026-05-12-adms-readiness-for-real/</link>
+      <pubDate>Tue, 12 May 2026 10:00:00 -0400</pubDate>
+      <guid>http://localhost:1313/posts/2026-05-12-adms-readiness-for-real/</guid>
+      <description>&lt;h2 id=&#34;why-adms-integration-isnt-the-same-as-readiness&#34;&gt;Why “ADMS integration” isn’t the same as readiness&lt;/h2&gt;&#xA;&lt;p&gt;A lot of ADMS projects get “integrated” on paper long before they’re actually ready for operations. Connectivity is loading, the map draws, devices look roughly correct, and everyone is tempted to declare victory. Then the first serious outage or switching plan shows up and you discover that traces fall apart, phases are wrong, and operators don’t trust what they see on the screen.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>From Tickets to Topology: Designing OMS Integrations Around the Network Model</title>
       <link>http://localhost:1313/posts/2026-05-05-from-tickets-to-topology/</link>
@@ -23,13 +79,6 @@
       <description>&lt;p&gt;I write about how utilities actually make digital grid systems work in practice — especially where GIS, ADMS, OMS, DERMS, planning, field operations, and enterprise systems meet.&lt;/p&gt;&#xA;&lt;p&gt;My background is in utility GIS, ADMS integration, network modeling, and digital grid transformation. This site is where I share practical perspectives on architecture, data readiness, system ownership, and the operational realities behind utility modernization efforts.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-write-about&#34;&gt;What I write about&lt;/h2&gt;&#xA;&lt;p&gt;Topics on this site include:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>GIS as the System of Record for ADMS and OMS</title>
-      <link>http://localhost:1313/posts/2026-01-gis-system-of-record/</link>
-      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026-01-gis-system-of-record/</guid>
-      <description>&lt;h1 id=&#34;gis-as-the-system-of-record-for-adms-and-oms&#34;&gt;GIS as the System of Record for ADMS and OMS&lt;/h1&gt;&#xA;&lt;p&gt;Utilities rarely fail ADMS or OMS projects because of software.&#xA;They fail because foundational GIS data isn’t ready.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-gis-is-central&#34;&gt;Why GIS Is Central&lt;/h2&gt;&#xA;&lt;p&gt;GIS defines:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Network connectivity&lt;/li&gt;&#xA;&lt;li&gt;Phase modeling&lt;/li&gt;&#xA;&lt;li&gt;Operating voltage&lt;/li&gt;&#xA;&lt;li&gt;Asset relationships&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Every downstream system depends on this accuracy.&lt;/p&gt;&#xA;&lt;h2 id=&#34;common-data-gaps&#34;&gt;Common Data Gaps&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Self-intersecting lines&lt;/li&gt;&#xA;&lt;li&gt;Missing or invalid phase designation&lt;/li&gt;&#xA;&lt;li&gt;Null facility IDs&lt;/li&gt;&#xA;&lt;li&gt;Inconsistent feeder modeling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-actually-works&#34;&gt;What Actually Works&lt;/h2&gt;&#xA;&lt;p&gt;A targeted GIS data readiness assessment&#xA;&lt;em&gt;before&lt;/em&gt; OMS or ADMS implementation or upgrades.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>GIS in the Center: The Architecture Utilities Actually Operate On</title>
       <link>http://localhost:1313/posts/2026-01-gis-in-the-center-architecture/</link>
       <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
@@ -42,20 +91,6 @@
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/grid-operations-glossary/</guid>
       <description>&lt;p&gt;Before we talk about &lt;strong&gt;GIS in the center&lt;/strong&gt; of utility architecture, it helps to make sure we’re speaking the same language.&lt;/p&gt;&#xA;&lt;p&gt;Most ADMS and grid modernization conversations are full of acronyms—GIS, OMS, ADMS, SCADA, DERMS, MDMS, EAM—that mean one thing to the vendor slideware, and something slightly different to the people who actually operate the grid.&lt;/p&gt;&#xA;&lt;p&gt;This post is a working glossary for the terms I use across ADMS Readiness. It’s written for executives, program leaders, and adjacent teams who need to understand the concepts without living in them all day.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/2026-05-12-adms-readiness-for-real1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026-05-12-adms-readiness-for-real1/</guid>
-      <description>&lt;h2 id=&#34;caption-an-adms-is-only-as-trustworthy-as-the-network-model-it-gets-from-gis&#34;&gt;title: &amp;ldquo;ADMS Readiness, For Real: What the GIS→ADMS Integration Needs to Prove Before Go-Live&amp;rdquo;&#xA;date: 2026-05-12&#xA;draft: true&#xA;tags: [&amp;ldquo;ADMS&amp;rdquo;, &amp;ldquo;GIS&amp;rdquo;, &amp;ldquo;Readiness&amp;rdquo;, &amp;ldquo;Integration&amp;rdquo;]&#xA;cover:&#xA;image: &amp;ldquo;/images/adms-readiness/sunset-pole.jpg&amp;rdquo;&#xA;alt: &amp;ldquo;Distribution line at sunset&amp;rdquo;&#xA;caption: &amp;ldquo;An ADMS is only as trustworthy as the network model it gets from GIS.&amp;rdquo;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;why-adms-integration-isnt-the-same-as-readiness&#34;&gt;Why “ADMS integration” isn’t the same as readiness&lt;/h2&gt;&#xA;&lt;p&gt;A lot of ADMS projects get “integrated” on paper long before they’re actually ready for operations. Connectivity is loading, the map draws, devices look roughly correct, and everyone is tempted to declare victory. Then the first serious outage or switching plan shows up and you discover that traces fall apart, phases are wrong, and operators don’t trust what they see on the screen.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/readme/</guid>
-      <description>&lt;h1 id=&#34;articles&#34;&gt;Articles&lt;/h1&gt;&#xA;&lt;p&gt;A collection of writing on utility GIS, data readiness,&#xA;and operational system integration.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

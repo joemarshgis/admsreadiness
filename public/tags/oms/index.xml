@@ -6,21 +6,21 @@
     <description>Recent content in OMS on ADMS Readiness</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 20:18:00 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/oms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tracing Once, Using Everywhere: Propagated Values for OMS and ADMS</title>
+      <link>http://localhost:1313/posts/2026-05-23-tracing-once-using-everywhere/</link>
+      <pubDate>Sat, 23 May 2026 20:18:00 -0700</pubDate>
+      <guid>http://localhost:1313/posts/2026-05-23-tracing-once-using-everywhere/</guid>
+      <description>&lt;h1 id=&#34;tracing-once-using-everywhere-propagated-values-for-oms-and-adms&#34;&gt;Tracing Once, Using Everywhere: Propagated Values for OMS and ADMS&lt;/h1&gt;&#xA;&lt;p&gt;ArcGIS Utility Network tracing already gives us the path through the network, but OMS and ADMS usually need more than a list of traversed features. Export Subnetwork can produce JSON that external systems consume, and propagation lets that export carry network‑derived answers instead of forcing those systems to recalculate everything downstream.&lt;/p&gt;&#xA;&lt;p&gt;ArcGIS Pro 3.7 and the 2026 Network Management Release finally closed a gap I’ve seen in a lot of OMS/ADMS projects. For years I’ve watched teams bolt on custom extractors, ETL, and middleware just to answer questions the Utility Network is already capable of answering:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>From Tickets to Topology: Designing OMS Integrations Around the Network Model</title>
       <link>http://localhost:1313/posts/2026-05-05-from-tickets-to-topology/</link>
       <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/2026-05-05-from-tickets-to-topology/</guid>
       <description>&lt;h2 id=&#34;oms-is-only-as-good-as-its-model&#34;&gt;OMS is only as good as its model&lt;/h2&gt;&#xA;&lt;p&gt;At Hometown Electric and Light in Hometown, USA, one of the worst recent outages on paper didn’t look that bad. A single feeder issue on a calm day. The OMS confidently drew an outage polygon, identified a likely fault location, and generated work. Crews rolled, calls came in, and everyone expected a quick restore.&lt;/p&gt;&#xA;&lt;p&gt;What actually happened was a mess. The predicted fault location was off by a lateral, customers at the edge of the event never showed up in the OMS view, and dispatch ended up relying on a mix of calls, SCADA, and handwritten notes to figure out what was really out. Nothing was wrong with the OMS engine itself. The problem was that the network model it trusted did not match what was actually built and operated in the field.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GIS as the System of Record for ADMS and OMS</title>
-      <link>http://localhost:1313/posts/2026-01-gis-system-of-record/</link>
-      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026-01-gis-system-of-record/</guid>
-      <description>&lt;h1 id=&#34;gis-as-the-system-of-record-for-adms-and-oms&#34;&gt;GIS as the System of Record for ADMS and OMS&lt;/h1&gt;&#xA;&lt;p&gt;Utilities rarely fail ADMS or OMS projects because of software.&#xA;They fail because foundational GIS data isn’t ready.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-gis-is-central&#34;&gt;Why GIS Is Central&lt;/h2&gt;&#xA;&lt;p&gt;GIS defines:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Network connectivity&lt;/li&gt;&#xA;&lt;li&gt;Phase modeling&lt;/li&gt;&#xA;&lt;li&gt;Operating voltage&lt;/li&gt;&#xA;&lt;li&gt;Asset relationships&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Every downstream system depends on this accuracy.&lt;/p&gt;&#xA;&lt;h2 id=&#34;common-data-gaps&#34;&gt;Common Data Gaps&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Self-intersecting lines&lt;/li&gt;&#xA;&lt;li&gt;Missing or invalid phase designation&lt;/li&gt;&#xA;&lt;li&gt;Null facility IDs&lt;/li&gt;&#xA;&lt;li&gt;Inconsistent feeder modeling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-actually-works&#34;&gt;What Actually Works&lt;/h2&gt;&#xA;&lt;p&gt;A targeted GIS data readiness assessment&#xA;&lt;em&gt;before&lt;/em&gt; OMS or ADMS implementation or upgrades.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GIS in the Center: The Architecture Utilities Actually Operate On</title>
