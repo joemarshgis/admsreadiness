@@ -18,19 +18,17 @@
       el.removeAttribute('data-processed');
     });
 
-    await mermaid.run({
-      querySelector: '.mermaid'
-    });
+    await mermaid.run({ querySelector: '.mermaid' });
   };
 
-  document.addEventListener('DOMContentLoaded', renderMermaid);
-
-  const observer = new MutationObserver(() => {
+  document.addEventListener('DOMContentLoaded', () => {
     renderMermaid();
-  });
 
-  observer.observe(document.body, {
-    attributes: true,
-    attributeFilter: ['class']
+    const toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        setTimeout(renderMermaid, 100);
+      });
+    }
   });
 </script>
