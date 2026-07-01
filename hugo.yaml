@@ -21,7 +21,7 @@ menu:
       weight: 20
     - identifier: birdnetpi
       name: BirdNet-Pi
-      url: https://birds.admsreadiness.com/
+      url: "https://birds.admsreadiness.com/"
       weight: 25
     - identifier: rss
       name: RSS
@@ -65,7 +65,7 @@ params:
       - name: About
         url: /about/
       - name: BirdNet-Pi
-        url: https://birds.admsreadiness.com/
+        url: "https://birds.admsreadiness.com/"
       - name: Subscribe
         url: /about/#subscribe
 
