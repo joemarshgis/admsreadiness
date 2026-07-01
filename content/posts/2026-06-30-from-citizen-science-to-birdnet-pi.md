@@ -4,10 +4,9 @@ date: 2026-06-30T10:00:00-04:00
 draft: false
 tags: ["BirdNET-Pi", "BirdWeather", "Citizen Science", "GIS", "Raspberry Pi"]
 cover:
-  image: "images/redbreasted-nuthatch.jpg"
+  image: "/images/redbreasted-nuthatch.jpg"
   alt: "Microphone and Raspberry Pi bird listening station in a backyard setting."
   caption: "A small field device, a stream of observations, and a larger system to make sense of them."
-  summary: "How an early interest in Cornell’s citizen science work eventually connected to GIS, utilities, ADMS, and a BirdNET-Pi station listening for birds at the edge of the yard."
 ---
 
 This project feels like a small personal loop closing: from early exposure to citizen science, to GIS and utility systems, and back to a quiet device listening to the world outside.
